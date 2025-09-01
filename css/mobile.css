@@ -43,8 +43,9 @@
         display: flex;
     } */
 
-    .hamburger-menu {
-   display:block;
+    .hamburger-menu,
+    .mobile-logo {
+        display: block;
     }
     .hamburger-menu {
         width: 30px;
@@ -689,6 +690,7 @@
     }
 
 }
+
 
 
 
