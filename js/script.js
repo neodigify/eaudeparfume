@@ -99,9 +99,9 @@ const promoSwiper = new Swiper(".promoSwiper", {
   slidesPerView: 1.2,
   // mobile
   breakpoints: {
-    450: { slidesPerView: 1.5, aceBetween: 20 },
-    650: { slidesPerView: 1.8, aceBetween: 20 },
-    650: { slidesPerView: 1.8, aceBetween: 20 },
+    450: { slidesPerView: 1, aceBetween: 20 },
+    // 650: { slidesPerView: 1.8, aceBetween: 20 },
+    // 650: { slidesPerView: 1.8, aceBetween: 20 },
     767: { slidesPerView: 2, aceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 40 },
   },
@@ -267,3 +267,4 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
