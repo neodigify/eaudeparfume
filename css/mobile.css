@@ -48,12 +48,6 @@
         cursor: pointer;
     }
 
-    .hamburger-menu,
-    .mobile-logo {
-        display: block;
-    }
-
-
     /* category */
 
     .category-name {
@@ -693,6 +687,7 @@
     }
 
 }
+
 
 
 
