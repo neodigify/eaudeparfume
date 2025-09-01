@@ -26,10 +26,6 @@
         display: none;
     }
 
-    .logo-wrapper-div {
-        display: block;
-    }
-
     .search-wrapper {
         max-width: var(--100);
         flex-flow: row;
@@ -697,6 +693,7 @@
     }
 
 }
+
 
 
 
