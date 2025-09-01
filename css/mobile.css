@@ -43,15 +43,15 @@
         display: flex;
     } */
 
-    .hamburger-menu,
-    .mobile-logo {
-        display: block;
-    }
+ 
     .hamburger-menu {
         width: 30px;
         cursor: pointer;
     }
-
+   .hamburger-menu,
+    .mobile-logo {
+        display: block;
+    }
     /* category */
 
     .category-name {
@@ -690,6 +690,7 @@
     }
 
 }
+
 
 
 
