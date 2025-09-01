@@ -308,6 +308,9 @@
     .our-services-wrapper {
         padding: 100px 20px;
     }
+    .our-services-wrapper .swiper{
+        overflow: hidden !important;
+    }
 
 
     .our-services-wrapper .swiper-slide {
@@ -696,4 +699,5 @@
     }
 
 }
+
 
