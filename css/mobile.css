@@ -562,12 +562,12 @@
 
     .logo-name {
         width: var(--100);
-        max-width: 100px;
+        max-width: 130px;
     }
 
     .logo-img {
         width: var(--100);
-        max-width: 20px;
+        max-width: 30px;
     }
 
     .mobile-hero-wrapper {
@@ -693,6 +693,7 @@
     }
 
 }
+
 
 
 
