@@ -540,6 +540,12 @@
 }
 
 @media screen and (max-width: 479px) {
+
+  .hamburger-menu {
+        width: 20px;
+        cursor: pointer;
+    }
+    
     .main-container {
         overflow: hidden;
     }
@@ -596,9 +602,6 @@
         padding-left: 0;
         padding-right: 0;
     }
-
-
-
 
     .testimonial-section-wrapper {
         padding-top: 40px;
@@ -687,6 +690,7 @@
     }
 
 }
+
 
 
 
