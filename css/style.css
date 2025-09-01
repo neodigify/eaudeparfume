@@ -822,9 +822,9 @@ h3 {
   border-radius: 4px;
 }
 
-.swiper.promoSwiper {
+/* .swiper.promoSwiper {
   overflow: visible !important;
-}
+} */
 
 
 .udforsk-section {
@@ -1476,4 +1476,5 @@ h5 {
 
 #w-node-_419a943b-09ec-2c88-a6be-a4a83c931272-5e73eaf4 {
   grid-row: span 2 / span 2;
+
 }
