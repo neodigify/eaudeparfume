@@ -400,9 +400,9 @@
         height: 80px;
     }
 
-    .swiper-slide {
+/*     .swiper-slide {
         margin-right: 20px !important;
-    }
+    } */
 
     .swiper {
         overflow: visible !important;
@@ -699,6 +699,7 @@
     }
 
 }
+
 
 
 
