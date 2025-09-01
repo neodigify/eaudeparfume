@@ -291,7 +291,8 @@ h3 {
 
 
 .nav-menu-container {
-max-width:446px;
+ grid-column-gap: 40px;
+  grid-row-gap: 40px;
   justify-content: space-between;
   align-items: center;
   display: flex;
@@ -1467,6 +1468,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
