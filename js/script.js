@@ -32,15 +32,15 @@ const mobileSwiper = new Swiper(".mobile-hero-swiper", {
 //category
 const categorySwiper = new Swiper(".categorySwiper", {
   loop: true,
-  spaceBetween: 16,
+  spaceBetween: 5,
   grabCursor: true,
   slidesPerView: 2.8,
   breakpoints: {
-    400: { slidesPerView: 3.5, spaceBetween: 10 },
-    480: { slidesPerView: 4.1, spaceBetween: 10 },
-    600: { slidesPerView: 4.5, spaceBetween: 10 },
-    650: { slidesPerView: 5.5, spaceBetween: 10 },
-    768: { slidesPerView: 5, spaceBetween: 10 },
+    400: { slidesPerView: 3.5, spaceBetween: 5 },
+    480: { slidesPerView: 4.1, spaceBetween: 5 },
+    600: { slidesPerView: 4.5, spaceBetween: 5 },
+    650: { slidesPerView: 5.5, spaceBetween: 5 },
+    768: { slidesPerView: 5, spaceBetween: 5 },
     850: { slidesPerView: 6, spaceBetween: 24 },
     1000: { slidesPerView: 7, spaceBetween: 28 },
     1150: { slidesPerView: 8, spaceBetween: 28 },
@@ -260,6 +260,7 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
 
 
 
