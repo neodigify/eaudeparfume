@@ -724,34 +724,29 @@ h3 {
 /* brand-slider */
 
 .brand-slider-wrapper {
-  border: .33px solid #d2cfca;
-  border-bottom-style: none;
   width: 100%;
   max-width: 100%;
-  margin: 60px auto 20px;
+  padding: 60px 20px ;
+  margin: auto
 }
 
 .brand-slider-wrapper.border-b {
-
+    border: .33px solid #d2cfca;
   border-style: none none solid;
   border-bottom-color: #d2cfca;
-  justify-content: space-between;
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 60px 20px ;
 }
 
-.brand-slider-main-container {
-
-  justify-content: space-between;
+/* .brand-slider-main-container {
   align-items: center;
   width: 100%;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
-}
+} */
 
 .brand-logo-div {
   width: auto;
@@ -1473,4 +1468,5 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
