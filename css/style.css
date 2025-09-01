@@ -1307,6 +1307,12 @@ h5 {
   font-weight: 400;
 }
 
+.pp-14px-500 {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .footer-1st-p.pp-14px-400.text-282929 {
   color: #282929;
   font-size: 14px;
