@@ -66,6 +66,11 @@
         position: static;
     }
 
+    .category-section {
+  width: 100%;
+  padding: 0 20px 0;
+}
+
     .border-radius-4px {
         border-radius: 4px;
     }
@@ -294,6 +299,7 @@
     .services-swiper {
         display: block !important;
         margin: auto auto;
+        max-width: 318px;
     }
 
     .our-services-wrapper {
