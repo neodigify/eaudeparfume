@@ -25,14 +25,8 @@ window.addEventListener("resize", initSwiper);
 const mobileSwiper = new Swiper(".mobile-hero-swiper", {
   loop: true,
   grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+  spaceBetween: 20,
+  slidesPerView: 1,
 });
 
 //category
@@ -266,6 +260,7 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
 
 
 
