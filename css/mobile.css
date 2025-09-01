@@ -603,7 +603,9 @@
     .main-container {
         overflow: hidden;
     }
-
+.wishlist-icon, .cart-icon {
+    width: 15px;
+}
     .cg-37px-600 {
         font-size: 25px;
         line-height: 1em;
@@ -694,6 +696,7 @@
     }
 
 }
+
 
 
 
