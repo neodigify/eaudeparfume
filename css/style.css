@@ -638,8 +638,6 @@ h3 {
 
 
 .product-badge-wishlist {
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
   background-image: url('../images/Group-1-1.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
@@ -838,7 +836,9 @@ h3 {
   color: #fff;
   background-color: #aa5291;
 }
-
+.aktuelle-tilbud.best-seller-section {
+  padding-bottom: 100px;
+}
 
 .background-img-wrapper {
   background-image: url('../images/evie-s-vRccXUTZBp8-unsplash.jpg');
@@ -1454,6 +1454,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
