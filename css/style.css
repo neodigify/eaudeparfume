@@ -732,29 +732,24 @@ h3 {
 }
 
 .brand-slider-wrapper.border-b {
-  grid-column-gap: 130px;
-  grid-row-gap: 130px;
+
   border-style: none none solid;
   border-bottom-color: #d2cfca;
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
   margin-bottom: auto;
-  padding: 60px 20px 50px;
-  display: flex;
-  position: relative;
+  padding: 60px 20px ;
 }
 
 .brand-slider-main-container {
-  grid-column-gap: 130px;
-  grid-row-gap: 130px;
+
   justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  display: flex;
   position: relative;
 }
 
@@ -1478,3 +1473,4 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
