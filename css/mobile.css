@@ -179,8 +179,6 @@
 
     /* brand-slider */
     .brand-slider-wrapper.border-b {
-        grid-column-gap: 60px;
-        grid-row-gap: 60px;
         padding-bottom: 40px;
         padding-top: 40px;
     }
@@ -699,6 +697,7 @@
     }
 
 }
+
 
 
 
