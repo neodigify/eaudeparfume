@@ -67,10 +67,10 @@ const swiper = new Swiper(".swiperProduct", {
   //   prevEl: ".swiper-button-prev",
   // },
   breakpoints: {
-    450: { slidesPerView: 2.1, aceBetween: 20 },
-    500: { slidesPerView: 2.4, aceBetween: 20 },
-    767: { slidesPerView: 3, aceBetween: 20 },
-    860: { slidesPerView: 4, paceBetween: 24 },
+    450: { slidesPerView: 2.1, spaceBetween: 20 },
+    500: { slidesPerView: 2.4, spaceBetween: 20 },
+    767: { slidesPerView: 3, spaceBetween: 20 },
+    860: { slidesPerView: 4, spaceBetween: 24 },
     1024: { slidesPerView: 5, spaceBetween: 28 },
   },
 });
@@ -82,8 +82,8 @@ const brandSwiper = new Swiper(".brandSwiper", {
   slidesPerView: 2, // mobile default
   spaceBetween: 24,
   breakpoints: {
-    450: { slidesPerView: 3, aceBetween: 20 },
-    650: { slidesPerView: 4, aceBetween: 20 },
+    450: { slidesPerView: 3, spaceBetween: 20 },
+    650: { slidesPerView: 4, spaceBetween: 20 },
     768: { slidesPerView: 5, spaceBetween: 40 },
     1024: { slidesPerView: 6, spaceBetween: 60 }, // desktop
   },
@@ -99,10 +99,9 @@ const promoSwiper = new Swiper(".promoSwiper", {
   slidesPerView: 1.2,
   // mobile
   breakpoints: {
-    450: { slidesPerView: 1, aceBetween: 20 },
-    // 650: { slidesPerView: 1.8, aceBetween: 20 },
-    // 650: { slidesPerView: 1.8, aceBetween: 20 },
-    767: { slidesPerView: 2, aceBetween: 20 },
+    450: { slidesPerView: 1.4, spaceBetween: 20 },
+    650: { slidesPerView: 1.8, spaceBetween: 20 },
+    767: { slidesPerView: 2, spaceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 40 },
   },
 });
@@ -267,4 +266,5 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
 
