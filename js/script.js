@@ -80,7 +80,7 @@ const brandSwiper = new Swiper(".brandSwiper", {
   speed: 500,
   grabCursor: true,
   slidesPerView: 2, // mobile default
-  spaceBetween: 24,
+  spaceBetween: 20,
   breakpoints: {
     450: { slidesPerView: 3, spaceBetween: 20 },
     650: { slidesPerView: 4, spaceBetween: 20 },
@@ -95,7 +95,7 @@ const promoSwiper = new Swiper(".promoSwiper", {
   loop: true,
   speed: 500,
   grabCursor: true,
-  spaceBetween: 24,
+  spaceBetween: 20,
   slidesPerView: 1.2,
   // mobile
   breakpoints: {
@@ -266,5 +266,6 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
 
 
