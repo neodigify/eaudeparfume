@@ -386,6 +386,8 @@
     }
     .footer-text-cell {
         padding-bottom: 0px;
+            grid-row-gap: 0px;
+    }
 
 
     #w-node-f338b647-f108-c66b-8de1-91d6da885713-5e73eaf4 {
@@ -692,6 +694,7 @@
     }
 
 }
+
 
 
 
