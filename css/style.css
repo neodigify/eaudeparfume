@@ -119,6 +119,7 @@ h3 {
   font-weight: 600;
   line-height: 1.6em;
 
+
 }
 .pp-15px-400{
     font-family: Poppins, sans-serif;
@@ -752,9 +753,13 @@ h3 {
 /* promo/blog */
 .promo-card-section-wrapper {
   width: 100%;
-  max-width: 1160px;
-  margin: auto -60px auto auto;
+  max-width: 830px;
+  /* margin: auto -60px auto auto; */
+  margin: auto;
   padding: 60px 20px;
+}
+.promo-card-section-wrapper .swiper{
+  overflow: visible !important;
 }
 
 .promo-media {
@@ -879,6 +884,10 @@ h3 {
   margin-bottom: auto;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.testimonial-section-wrapper a{
+  text-decoration: underline;
 }
 
 
@@ -1082,23 +1091,16 @@ h5 {
 
 }
 
-.pp-16px-600 {
-  font-family: Poppins, sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 2.08em;
-}
-
 .service-title {
   text-align: center;
   text-transform: uppercase;
+  margin: 28px 0 15px;
 }
 
 .shipping-fast-img {
   text-align: left;
   width: 35px;
   height: 35px;
-  padding-bottom: 10px;
 }
 
 .our-services-wrapper {
@@ -1115,14 +1117,14 @@ h5 {
 /* desktop static grid */
 .our-services-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 120px 0px;
+  padding: 90px 0px;
+
 }
 
 .our-services {
-  flex: 1 1 calc(25% - 22.5px);
+  width:calc(25% - 50px);
   text-align: center;
 
 }
@@ -1148,7 +1150,7 @@ h5 {
 /* email */
 .contact-email-wrapper {
   filter: drop-shadow(0 0 #717373);
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 40%, rgba(255, 255, 255, 0) 100%), url('../images/jamie-coupaud-_B5vT7ZfCzg-unsplash.jpg');
+  background: linear-gradient(to top, rgba(40, 41, 41, 0.6) 0%, rgba(40, 41, 41, 0.6) 100%), url('../images/jamie-coupaud-_B5vT7ZfCzg-unsplash.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1236,7 +1238,6 @@ h5 {
 .email-circle {
   text-align: center;
   width: 205px;
-  height: 205px;
   position: absolute;
   top: -80px;
   right: 15%;
@@ -1279,8 +1280,6 @@ h5 {
   max-width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  display: block;
-  position: static;
 }
 
 .footer-text-cell {
@@ -1317,10 +1316,23 @@ h5 {
 .footer-bar-div {
   justify-content: flex-start;
   align-items: stretch;
-  max-width: 1164px;
+  max-width: 1244px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  width: 100%;
+}
+
+.footer-bar-div ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-bar-div ul li{
+  list-style: none;
 }
 
 .payment-card-div {

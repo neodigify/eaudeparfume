@@ -5,7 +5,7 @@ function initSwiper() {
     mobileSwiperHeader = new Swiper(".mobile-swiper-top-bar", {
       direction: "vertical",
       slidesPerView: 1,
-      loop: true,
+      loop: false,
       grabCursor: true,
       autoplay: {
         delay: 2000,
@@ -23,7 +23,7 @@ window.addEventListener("resize", initSwiper);
 
 //mobile hero
 const mobileSwiper = new Swiper(".mobile-hero-swiper", {
-  loop: true,
+  loop: false,
   grabCursor: true,
   spaceBetween: 20,
   slidesPerView: 1,
@@ -31,7 +31,7 @@ const mobileSwiper = new Swiper(".mobile-hero-swiper", {
 
 //category
 const categorySwiper = new Swiper(".categorySwiper", {
-  loop: true,
+  loop: false,
   spaceBetween: 5,
   grabCursor: true,
   slidesPerView: 2.8,
@@ -49,7 +49,7 @@ const categorySwiper = new Swiper(".categorySwiper", {
 
 //best-seller
 const swiper = new Swiper(".swiperProduct", {
-  loop: true,
+  loop: false,
   grabCursor: true,
   // autoplay: { delay: 2800, disableOnInteraction: false },
   speed: 500,
@@ -70,7 +70,7 @@ const swiper = new Swiper(".swiperProduct", {
 });
 //brand-logo
 const brandSwiper = new Swiper(".brandSwiper", {
-  loop: true,
+  loop: false,
   speed: 500,
   grabCursor: true,
   slidesPerView: 2, // mobile default
@@ -86,7 +86,7 @@ const brandSwiper = new Swiper(".brandSwiper", {
 //promo-card
 
 const promoSwiper = new Swiper(".promoSwiper", {
-  loop: true,
+  loop: false,
   speed: 500,
   grabCursor: true,
   spaceBetween: 20,
@@ -96,14 +96,14 @@ const promoSwiper = new Swiper(".promoSwiper", {
     450: { slidesPerView: 1.4, spaceBetween: 20 },
     650: { slidesPerView: 1.8, spaceBetween: 20 },
     767: { slidesPerView: 2, spaceBetween: 20 },
-    1024: { slidesPerView: 3, spaceBetween: 40 },
+    1024: { slidesPerView: 2, spaceBetween: 40 },
   },
 });
 
 //review
 const reviewSwiper = new Swiper(".review-swiper", {
   speed: 500,
-  loop: true,
+  loop: false,
   grabCursor: true,
   spaceBetween: 24,
   slidesPerView: 1,

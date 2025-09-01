@@ -292,39 +292,15 @@
         padding-top: 20px;
     }
 
-    .our-services-grid {
-        display: none;
-    }
-
-    .services-swiper {
-        display: block !important;
-        margin: auto auto;
-        max-width: 250px;
-    }
-
-    .our-services-wrapper {
-        padding: 100px 20px;
-    }
-    .our-services-wrapper .swiper{
-        overflow: hidden !important;
-    }
-
-
-    .our-services-wrapper .swiper-slide {
-        opacity: 0;
-    }
-
-    .our-services-wrapper .swiper-slide.swiper-slide-active {
-        opacity: 1;
-    }
-
-    .services-swiper .swiper-wrapper {
-        align-items: center;
-        margin: auto auto;
-        text-align: center;
-        /* centers slides on the cross axis */
-    }
-
+/* Service */
+.our-services {
+    width: calc(50% - 50px);
+    text-align: center;
+}
+.our-services-grid{
+    row-gap: 50px;
+    padding: 90px 100px;
+}
     .contact-email-div {
         padding-top: 50px;
     }
@@ -334,10 +310,12 @@
         height: 520px;
     }
 
-
-
     .contact-heading.cg-37px-600 {
         font-size: 30px;
+    }
+
+    .contact-email-div .submit-button{
+        text-decoration: underline;
     }
 
     /* footer */
@@ -369,11 +347,6 @@
         padding-bottom: 0;
     }
 
-    .cell-2,
-    .cell-3,
-    .cell-4 {
-        display: none;
-    }
 
     .swiper-slide {
         display: flex;
@@ -467,10 +440,6 @@
         padding-top: 20px;
         padding-bottom: 40px;
     }
-
-
-
-
     .promo-heading {
         font-size: 30px;
     }
@@ -491,14 +460,44 @@
         font-size: 16px;
         padding-top: 8px;
     }
+    .our-services-grid {
+        display: none;
+    }
 
+    .services-swiper {
+        display: block !important;
+        margin: auto auto;
+        max-width: 250px;
+    }
+
+    .our-services-wrapper {
+        padding: 60px 20px 80px;
+    }
+    .our-services-wrapper .swiper{
+        overflow: hidden !important;
+    }
+.our-services{
+    width: 100%;
+}
+
+    .our-services-wrapper .swiper-slide {
+        opacity: 0;
+    }
+
+    .our-services-wrapper .swiper-slide.swiper-slide-active {
+        opacity: 1;
+    }
+
+    .services-swiper .swiper-wrapper {
+        align-items: center;
+        margin: auto auto;
+        text-align: center;
+        /* centers slides on the cross axis */
+    }
     .testimonial-section-wrapper {
         padding-top: 40px;
         padding-bottom: 40px;
     }
-
-
-
 
     .contact-title.pp-12px-500 {
         display: none;
@@ -572,8 +571,7 @@
     }
 
     .footer-wrapper {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding:40px 20px;
     }
 
 
@@ -683,9 +681,9 @@
         padding-right: 0;
     }
 
-    .footer-wrapper {
-        padding-top: 20px;
-        padding-bottom: 20px;
+    .contact-heading {
+        max-width: 250px;
+        margin-top: 65px;
     }
     #w-node-_419a943b-09ec-2c88-a6be-a4a83c93124c-5e73eaf4 {
         grid-template-rows: auto auto;
