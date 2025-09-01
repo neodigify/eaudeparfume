@@ -485,7 +485,6 @@ h3 {
   width: 100%;
   max-width: 1204px;
   margin: auto;
-  padding-top: 20px;
 }
 
 
@@ -1454,6 +1453,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
