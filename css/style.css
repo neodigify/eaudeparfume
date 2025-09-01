@@ -1131,12 +1131,12 @@ h5 {
   color: #abbcab;
 }
 
-/* .our-services-wrapper .swiper,
+.our-services-wrapper .swiper,
 .our-services .swiper-slide,
 .our-services-wrapper .swiper-slide.swiper-slide-active {
   width: 100%;
   height: auto !important;
-} */
+}
 
 /* Swiper hides by default on desktop */
 .services-swiper {
@@ -1454,6 +1454,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
