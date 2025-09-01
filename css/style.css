@@ -526,10 +526,6 @@ h3 {
 
 /* best-seller */
 
-
-
-/* best-seller */
-
 .best-seller-section-wrapper {
   background-color: var(--d2cfca);
 }
@@ -565,7 +561,6 @@ h3 {
 }
 
 .product-card {
-
   padding-bottom: 130px;
 }
 
@@ -621,8 +616,6 @@ h3 {
 
 .new-price {
   text-align: left;
-  justify-content: center;
-  align-items: center;
   display: block;
   padding-top: 10px
 }
@@ -668,7 +661,7 @@ h3 {
   justify-content: center;
   align-items: center;
   width: 44px;
-  height: 47px;
+  height: 44px;
   display: flex;
 }
 
@@ -755,9 +748,6 @@ h3 {
 
 
 /* promo/blog */
-
-
-
 .promo-card-section-wrapper {
   width: 100%;
   max-width: 1160px;
@@ -903,8 +893,6 @@ h3 {
   font-size: 14.4px;
 
 }
-
-
 .round-star-img {
   width: 20px;
   height: 20px;
@@ -912,11 +900,9 @@ h3 {
 
 .testimonials-heading {
   text-align: center;
-
 }
 
 .see-more {
-
   text-decoration: underline;
 }
 
@@ -1132,7 +1118,7 @@ h5 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 70px 0px;
+  padding: 120px 0px;
 }
 
 .our-services {
@@ -1468,6 +1454,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
