@@ -396,8 +396,8 @@
 
 @media screen and (max-width: 767px) {
     .category-div-img {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
 
     .swiper-slide {
@@ -699,6 +699,7 @@
     }
 
 }
+
 
 
 
