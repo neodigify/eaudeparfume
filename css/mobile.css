@@ -44,6 +44,9 @@
     } */
 
     .hamburger-menu {
+   display:block;
+    }
+    .hamburger-menu {
         width: 30px;
         cursor: pointer;
     }
@@ -686,6 +689,7 @@
     }
 
 }
+
 
 
 
