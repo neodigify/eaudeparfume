@@ -36,11 +36,11 @@ const categorySwiper = new Swiper(".categorySwiper", {
   grabCursor: true,
   slidesPerView: 2.8,
   breakpoints: {
-    400: { slidesPerView: 3.5, spaceBetween: 20 },
-    480: { slidesPerView: 4.1, spaceBetween: 20 },
-    600: { slidesPerView: 4.5, spaceBetween: 20 },
-    650: { slidesPerView: 5.5, spaceBetween: 20 },
-    768: { slidesPerView: 5, spaceBetween: 24 },
+    400: { slidesPerView: 3.5, spaceBetween: 10 },
+    480: { slidesPerView: 4.1, spaceBetween: 10 },
+    600: { slidesPerView: 4.5, spaceBetween: 10 },
+    650: { slidesPerView: 5.5, spaceBetween: 10 },
+    768: { slidesPerView: 5, spaceBetween: 10 },
     850: { slidesPerView: 6, spaceBetween: 24 },
     1000: { slidesPerView: 7, spaceBetween: 28 },
     1150: { slidesPerView: 8, spaceBetween: 28 },
@@ -260,6 +260,7 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
 
 
 
