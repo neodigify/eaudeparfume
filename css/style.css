@@ -902,15 +902,12 @@ h3 {
   text-align: center;
 }
 
-.see-more {
-  text-decoration: underline;
-}
-
 .see-more.pp-17px-600.text-273a2a {
   color: #273a2a;
   background-color: #fff0;
   padding: 0;
-
+  text-decoration: underline;
+}
 }
 
 .testimonials {
@@ -1454,6 +1451,7 @@ h5 {
   grid-row: span 2 / span 2;
 
 }
+
 
 
 
