@@ -60,6 +60,10 @@ p {
   margin-bottom: 0px;
 }
 
+a {
+  color: inherit;
+}
+
 .body {
   height: var(--100);
   line-height: 1.2em;

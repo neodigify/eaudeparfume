@@ -132,8 +132,8 @@
 
     .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy,
     .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy.bg-transparent {
-        width: 220px;
-        height: 60px;
+        min-width: 220px;
+        min-height: 60px;
         text-align: center;
         display: flex;
         align-items: center;
