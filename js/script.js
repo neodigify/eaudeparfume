@@ -5,7 +5,7 @@ function initSwiper() {
     mobileSwiperHeader = new Swiper(".mobile-swiper-top-bar", {
       direction: "vertical",
       slidesPerView: 1,
-      loop: false,
+      loop: true,
       grabCursor: true,
       autoplay: {
         delay: 2000,
