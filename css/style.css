@@ -1353,6 +1353,14 @@ ol {
   line-height: 2.1em;
 }
 
+.paddding-t-16px {
+  padding-top: 16px;
+}
+
+.line-height-1-9 {
+  line-height: 1.9em;
+}
+
 .footer-1st-column {
   display: block;
 
