@@ -9,6 +9,12 @@
         padding-bottom: 40px;
     }
 
+    .category-div-img {
+        height: calc(-27.9365px + 15.873vw);
+        width: calc(-27.9365px + 15.873vw);
+        max-width: unset;
+    }
+
     .header-top-bar-wrapper {
         width: 100%;
     }
@@ -42,15 +48,17 @@
         display: flex;
     } */
 
- 
+
     .hamburger-menu {
         width: 30px;
         cursor: pointer;
     }
-   .hamburger-menu,
+
+    .hamburger-menu,
     .mobile-logo {
         display: block;
     }
+
     /* category */
 
     .category-name {
@@ -67,9 +75,9 @@
     }
 
     .category-section {
-  width: 100%;
-  padding: 0 20px 0;
-}
+        width: 100%;
+        padding: 0 20px 0;
+    }
 
     .border-radius-4px {
         border-radius: 4px;
@@ -292,15 +300,17 @@
         padding-top: 20px;
     }
 
-/* Service */
-.our-services {
-    width: calc(50% - 50px);
-    text-align: center;
-}
-.our-services-grid{
-    row-gap: 50px;
-    padding: 90px 100px;
-}
+    /* Service */
+    .our-services {
+        width: calc(50% - 50px);
+        text-align: center;
+    }
+
+    .our-services-grid {
+        row-gap: 50px;
+        padding: 90px 100px;
+    }
+
     .contact-email-div {
         padding-top: 50px;
     }
@@ -314,7 +324,7 @@
         font-size: 30px;
     }
 
-    .contact-email-div .submit-button{
+    .contact-email-div .submit-button {
         text-decoration: underline;
     }
 
@@ -362,9 +372,10 @@
         max-width: 380px;
         margin-top: 10px;
     }
+
     .footer-text-cell {
         padding-bottom: 0px;
-            grid-row-gap: 0px;
+        grid-row-gap: 0px;
     }
 
 
@@ -390,16 +401,17 @@
     }
 
 
-    
+
 }
 
 @media screen and (max-width: 767px) {
     .category-div-img {
-        width: 80px;
-        height: 80px;
+        height: calc(-29.7674px + 23.2558vw);
+        width: calc(-29.7674px + 23.2558vw);
+        max-width: unset;
     }
 
-/*     .swiper-slide {
+    /*     .swiper-slide {
         margin-right: 20px !important;
     } */
 
@@ -440,6 +452,7 @@
         padding-top: 20px;
         padding-bottom: 40px;
     }
+
     .promo-heading {
         font-size: 30px;
     }
@@ -460,6 +473,7 @@
         font-size: 16px;
         padding-top: 8px;
     }
+
     .our-services-grid {
         display: none;
     }
@@ -473,12 +487,14 @@
     .our-services-wrapper {
         padding: 60px 20px 80px;
     }
-    .our-services-wrapper .swiper{
+
+    .our-services-wrapper .swiper {
         overflow: hidden !important;
     }
-.our-services{
-    width: 100%;
-}
+
+    .our-services {
+        width: 100%;
+    }
 
     .our-services-wrapper .swiper-slide {
         opacity: 0;
@@ -494,6 +510,7 @@
         text-align: center;
         /* centers slides on the cross axis */
     }
+
     .testimonial-section-wrapper {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -571,12 +588,12 @@
     }
 
     .footer-wrapper {
-        padding:40px 20px;
+        padding: 40px 20px;
     }
 
 
 
-        #w-node-_419a943b-09ec-2c88-a6be-a4a83c93124c-5e73eaf4 {
+    #w-node-_419a943b-09ec-2c88-a6be-a4a83c93124c-5e73eaf4 {
         grid-template-rows: auto auto;
         grid-template-columns: 1fr 1fr;
     }
@@ -596,19 +613,30 @@
     }
 }
 
+@media screen and (max-width: 544px) {
+    .category-div-img {
+        height: calc(-31.5152px + 30.303vw);
+        width: calc(-31.5152px + 30.303vw);
+        max-width: unset;
+    }
+}
+
 @media screen and (max-width: 479px) {
 
-  .hamburger-menu {
+    .hamburger-menu {
         width: 20px;
         cursor: pointer;
     }
-    
+
     .main-container {
         overflow: hidden;
     }
-.wishlist-icon, .cart-icon {
-    width: 15px;
-}
+
+    .wishlist-icon,
+    .cart-icon {
+        width: 15px;
+    }
+
     .cg-37px-600 {
         font-size: 25px;
         line-height: 1em;
@@ -685,6 +713,7 @@
         max-width: 250px;
         margin-top: 65px;
     }
+
     #w-node-_419a943b-09ec-2c88-a6be-a4a83c93124c-5e73eaf4 {
         grid-template-rows: auto auto;
         grid-template-columns: 1fr;
@@ -699,25 +728,3 @@
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
