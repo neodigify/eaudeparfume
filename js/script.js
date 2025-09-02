@@ -36,7 +36,7 @@ const categorySwiper = new Swiper(".categorySwiper", {
   grabCursor: true,
   slidesPerView: 3.3,
   breakpoints: {
-    544: { slidesPerView: 4.3, spaceBetween: 5 },
+    545: { slidesPerView: 4.3, spaceBetween: 5 },
     // 480: { slidesPerView: 4.1, spaceBetween: 5 },
     // 600: { slidesPerView: 3.5, spaceBetween: 5 },
     // 650: { slidesPerView: 4.5, spaceBetween: 5 },
