@@ -260,9 +260,3 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
-
-
-
-
-
-

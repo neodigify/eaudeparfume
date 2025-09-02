@@ -62,7 +62,7 @@
     /* category */
 
     .category-name {
-        font-size: 16px;
+        font-size: 13px;
     }
 
     /* mobile-hero */
@@ -94,7 +94,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 4px;
-        padding-top: 60px;
+        padding-top: 40px;
         padding-left: 40px;
     }
 
@@ -111,56 +111,56 @@
         position: relative;
     }
 
-    .mobile-hero.hero-p {
-        padding: 10px 0px;
-    }
 
-    .mobile-hero-text-field {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
 
     .mobile-hero-button-div {
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+
+        display: flex;
+        gap: 10px;
         flex-flow: wrap;
         justify-content: center;
         align-items: center;
-        display: flex;
-        padding-top: 10px;
+
     }
 
-    .button.btn-p.border-radius-4px.bg-273a2a.pp-13px-500 {
+    /* 
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text {
         text-align: center;
         padding-left: 100px;
         padding-right: 100px;
+    } */
+
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy,
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy.bg-transparent {
+        width: 220px;
+        height: 60px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 
-    .button.btn-p.border-radius-4px.bg-273a2a.pp-13px-500.bg-aa5291 {
-        padding: 20px 80px;
-        font-size: 17px;
-    }
-
-    .button.btn-p.border-radius-4px.bg-273a2a.pp-13px-500.bg-white {
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-white {
         background-color: var(--white);
         color: var(--d2cfca);
     }
 
-    .button.btn-p.border-radius-4px.bg-273a2a.pp-13px-500.bg-aa5291-copy {
-        padding: 25px 80px;
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy {
+        background-color: var(--aa5291);
     }
 
-    .button.btn-p.border-radius-4px.bg-273a2a.pp-13px-500.bg-aa5291-copy.bg-transparent {
+    .button.btn-p.border-radius-4px.bg-273a2a.button-text.bg-aa5291-copy.bg-transparent {
         border: 1px solid var(--aa5291);
         background-color: var(--transparent);
         color: var(--aa5291);
-        padding: 25px 60px;
+
     }
 
-    .hero-p.pp-16px-400 {
+    .hero-p {
         text-align: center;
         padding: 20px;
-        font-size: 20px;
+
     }
 
     .hero-2nd-div.border-radius-4px.mobile-hero {
@@ -176,6 +176,9 @@
     }
 
 
+
+
+
     /* best-seller */
 
     .best-seller-section,
@@ -184,9 +187,20 @@
     }
 
     /* brand-slider */
+
+    .brand-slider-wrapper.border-b.b-t.desktop {
+        display: none;
+    }
+
+    .brand-slider-wrapper.border-b.b-t.mobile {
+        display: block;
+        border: .33px solid #d2cfca;
+        border-style: solid none solid;
+    }
+
     .brand-slider-wrapper.border-b {
-        padding-bottom: 40px;
-        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
 
     .aktuelle-tilbud.best-seller-section,
@@ -215,7 +229,7 @@
 
     .review-wrapper {
         width: var(--100);
-        flex-flow: column;
+
         padding-top: 40px;
     }
 
@@ -434,9 +448,7 @@
         height: auto;
     }
 
-    .mobile-hero {
-        height: 350px;
-    }
+
 
     .mobile-hero-content {
         max-width: calc(100% - 170px);
@@ -447,6 +459,9 @@
         height: var(--100);
     }
 
+    .mobile-hero {
+        height: 350px;
+    }
 
     .best-seller-div.p-b {
         padding-top: 20px;
@@ -465,13 +480,6 @@
 
     .review-wrapper {
         padding-top: 20px;
-    }
-
-
-
-    .see-more {
-        font-size: 16px;
-        padding-top: 8px;
     }
 
     .our-services-grid {
@@ -661,9 +669,6 @@
         height: auto;
     }
 
-    .mobile-hero-text.pp-33px-500 {
-        font-size: 14px;
-    }
 
     .mobile-hero-heading.cg-37px-600 {
         font-size: 25px;
@@ -671,7 +676,7 @@
     }
 
     .mobile-hero {
-        height: 300px;
+        height: 280px;
     }
 
     .product-card {
