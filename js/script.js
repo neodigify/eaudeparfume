@@ -41,9 +41,9 @@ const categorySwiper = new Swiper(".categorySwiper", {
     // 600: { slidesPerView: 3.5, spaceBetween: 5 },
     // 650: { slidesPerView: 4.5, spaceBetween: 5 },
     768: { slidesPerView: 6.3, spaceBetween: 5 },
-    850: { slidesPerView: 6.5, spaceBetween: 24 },
-    1000: { slidesPerView: 7, spaceBetween: 28 },
-    1150: { slidesPerView: 8, spaceBetween: 28 },
+    850: { slidesPerView: 6.5, spaceBetween: 20 },
+    1000: { slidesPerView: 7, spaceBetween: 20 },
+    1300: { slidesPerView: 8, spaceBetween: 20 },
   },
 });
 
@@ -56,20 +56,30 @@ const swiper = new Swiper(".swiperProduct", {
   spaceBetween: 16,
 
   breakpoints: {
+    380: { slidesPerView: 1.8, spaceBetween: 20 },
     450: { slidesPerView: 2.1, spaceBetween: 20 },
     500: { slidesPerView: 2.4, spaceBetween: 20 },
-    650: { slidesPerView: 2.8, spaceBetween: 20 },
-    730: { slidesPerView: 3, spaceBetween: 20 },
+    580: { slidesPerView: 2.7, spaceBetween: 20 },
+    650: { slidesPerView: 3, spaceBetween: 20 },
+    730: { slidesPerView: 3.4, spaceBetween: 20 },
     800: { slidesPerView: 3.5, spaceBetween: 20 },
     860: { slidesPerView: 4, spaceBetween: 24 },
     1024: { slidesPerView: 5, spaceBetween: 28 },
+    1200: { slidesPerView: 5.5, spaceBetween: 28 },
+    1350: { slidesPerView: 6, spaceBetween: 28 },
   },
 });
 //brand-logo
 const brandSwiper = new Swiper(".brandSwiper", {
-  loop: false,
-  speed: 500,
+  loop: true,
+  speed: 1500,
   grabCursor: true,
+  centeredSlides: true,
+  autoplay: true,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: true,
+  },
   slidesPerView: 2, // mobile default
   spaceBetween: 20,
   breakpoints: {
@@ -111,6 +121,7 @@ const reviewSwiper = new Swiper(".review-swiper", {
   breakpoints: {
     767: { slidesPerView: 2, spaceBetween: 24 },
     1024: { slidesPerView: 3, spaceBetween: 28 },
+    1400: { slidesPerView: 3, spaceBetween: 80 },
   },
   // render your custom tiny dots into the existing container
   pagination: {

@@ -50,21 +50,36 @@
         <div class="nav-menu-container">
           <a href="#" class="menu-item">Brand</a>
           <a href="#" class="menu-item">Kvinder</a>
-          <a href="#" class="menu-item">  Mænd </a>
+          <a href="#" class="menu-item">Mænd </a>
           <a href="#" class="menu-item">Tilbud</a>
           <a href="#" class="menu-item">Kategorier</a>
         </div>
 
-        <a href="#" class="main-logo-link w-inline-block"><img src="images/logo.png" loading="lazy" alt=""
-            class="logo" /></a>
+        <a href="#" class="main-logo-link w-inline-block">
+          <img src="images/logo.png" loading="lazy" alt="" class="logo" /></a>
 
-        <div class="search-wrapper">
+        <div class="menu-right">
+          <div class="search-wrapper desktop">
+            <div>
+              <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt="" class="search-img" />
+            </div>
+            <input class="search-text" type="search" id="mySearch" name="q" placeholder="Søg" />
+          </div>
+          <div class="icon-wrapper pp-10px-600">
+            <div class="wishlist-icon-container">
+              <img src="images/heart-6.svg" loading="lazy" width="30" alt="" class="wishlist-icon" />
+              <span class="wishlist-item-count pp-8px-400 " id="wishlistItemCount">0</span>
+            </div>
+            <div class="cart-icon-container">
+              <img src="images/shopping-cart-1.svg" loading="lazy" alt="" class="cart-icon" />
+              <span class="cart-item-count pp-8px-400 " id="cartItemCount">0</span>
+            </div>
+
+          </div>
+        </div>
+        <div class="search-wrapper mobile">
           <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt="" class="search-img" />
           <input class="search-text" type="search" id="mySearch" name="q" placeholder="Søg" />
-        </div>
-        <div class="icon-wrapper pp-10px-600">
-          <img src="images/heart-6.svg" loading="lazy" width="30" alt="" class="wishlist-icon" /><img
-            src="images/shopping-cart-1.svg" loading="lazy" alt="" class="cart-icon" />
         </div>
       </div>
     </section>
@@ -72,25 +87,30 @@
     <!-- hero desktop-->
     <section class="hero-wrapper">
       <div id="w-node-f338b647-f108-c66b-8de1-91d6da885713-5e73eaf4" class="w-layout-layout hero-div wf-layout-layout">
-        <div class="w-layout-cell hero-1st-div text-273a2a border-radius-4px">
-          <p class="hero-text pp-12px-500">ALT HVAD DU BEHØVER</p>
-          <h1 class="hero-heading-02 cg-47px-600 text-273a2a">
-            Skønhed &amp; plejE
-          </h1>
-          <p class="hero-p pp-14px-400 hero-padding-bottom">
-            Find din favorit blandt parfumer, makeup, hudpleje og meget mere –
-          </p>
-          <a href="#udforsk-nyheder-section" class="button btn-p border-radius-4px bg-273a2a button-text w-button">Shop
+        <div class="w-layout-cell hero-1st-div text-273a2a border-radius-em">
+          <div class="hero-first-col-wrapper">
+            <p class="hero-text pp-12px-500 p-634vw">ALT HVAD DU BEHØVER</p>
+            <h1 class="hero-heading-02 cg-47px-600 text-273a2a h1-2-45vw">
+              Skønhed &amp; plejE
+            </h1>
+            <p class="hero-p pp-14px-400 hero-padding-bottom p-73vw">
+              Find din favorit blandt parfumer, makeup, hudpleje og meget mere –
+            </p>
+          </div>
+
+          <a href="#udforsk-nyheder"
+            class="button border-radius-em bg-273a2a p-68vw hero-button btn-p-em w-button ">Shop
             nyheder</a>
         </div>
         <div id="w-node-f338b647-f108-c66b-8de1-91d6da885715-5e73eaf4"
-          class="w-layout-cell hero-2nd-div border-radius-4px bg-img">
-          <a href="#aktuelle-tilbud-section" class="button btn-p border-radius-4px button-text bg-aa5291 w-button">Shop
+          class="w-layout-cell hero-2nd-div border-radius-em bg-img">
+          <a href="#aktuelle-tilbud"
+            class="button border-radius-em bg-aa5291 p-68vw hero-button btn-p-em w-button ">Shop
             tilbud</a><img src="images/eaudeparfum.mobil.png" loading="lazy" alt="" class="discount-circle" />
         </div>
-        <div class="w-layout-cell border-radius-4px hero-3rd bg-img">
+        <div class="w-layout-cell border-radius-em hero-3rd bg-img">
           <a href="#abningstider"
-            class="button btn-p border-radius-4px button-text bg-282828 w-button">Butikker/åbningstider</a>
+            class="button border-radius-em p-68vw hero-button bg-282828 btn-p-em w-button">Butikker/åbningstider</a>
         </div>
       </div>
     </section>
@@ -110,8 +130,56 @@
             </div>
             <div class="swiper-slide">
               <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/ashley-piszek-crSkE1CKQL0-unsplash.jpg" loading="lazy"
+                  class="category-div-img" />
+                <div class="category-name">Makeup</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/icons8-team-y2T5hT7pWx4-unsplash.jpg" loading="lazy" class="category-div-img" />
+                <div class="category-name">Ansigtspleje</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/mathilde-langevin-2ObVEZxUDlc-unsplash.jpg" loading="lazy"
+                  class="category-div-img" />
+                <div class="category-name">Kropspleje</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
                 <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
                 <div class="category-name">Parfume til kvinder</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/huha-inc-Hp-3N5Gl1Ak-unsplash.jpg" loading="lazy" class="category-div-img" />
+                <div class="category-name">Hår</div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
+                <div class="category-name">Parfume til kvinder</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/trung-nhan-tran-BfSTSfEVWfA-unsplash.jpg" loading="lazy"
+                  class="category-div-img" />
+                <div class="category-name">Parfume til mænd</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="category-div cg-17px-500 text-282929">
+                <img alt="" src="images/victoria-aleksandrova-ET3dbNNHv-U-unsplash.jpg" loading="lazy"
+                  class="category-div-img" />
+                <div class="category-name">Tilbud</div>
               </div>
             </div>
             <div class="swiper-slide">
@@ -122,38 +190,10 @@
             </div>
             <div class="swiper-slide">
               <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="category-div cg-17px-500 text-282929">
-                <img alt="" src="images/w1536.webp" loading="lazy" class="category-div-img" />
-                <div class="category-name">Parfume til kvinder</div>
+                <img alt="" src="images/the-nix-company-tR-fqLlBg5c-unsplash.jpg" loading="lazy"
+                  class="category-div-img" />
+                <div class="category-name">Ansigts- og krops
+                  pleje til mænd</div>
               </div>
             </div>
             <div class="swiper-slide">
@@ -218,15 +258,15 @@
         Find din favorit blandt parfumer, makeup, hudpleje og meget mere –
       </p>
       <div class="mobile-hero-button-div">
-        <a href="#udforsk-nyheder-section"
-          class="button btn-p border-radius-4px bg-273a2a button-text bg-aa5291-copy w-button pp-15px-500">Shop
+        <a href="#udforsk-nyheder"
+          class="button btn-p border-radius-4px button-text-13px bg-aa5291 button-width  w-button">Shop
           nyheder</a>
-        <a href="#aktuelle-tilbud-section"
-          class="button btn-p border-radius-4px bg-273a2a button-text bg-aa5291-copy bg-transparent w-button pp-15px-500">Se
+        <a href="#aktuelle-tilbud"
+          class="button btn-p border-radius-4px button-width bg-transparent button-border-pink text-aa5291  button-text-13px">Se
           tilbud - op til 70%</a>
       </div>
     </section>
-    <!-- brand slider -->
+    <!-- brand slider mobile-->
     <section class="brand-slider-wrapper border-b b-t mobile">
       <!-- Swiper container -->
       <div class="swiper brandSwiper">
@@ -238,7 +278,6 @@
                   src="images/LOGO_floradanica-brand-assets-03-black.svg" alt="" class="logo-name-2" /></a>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="brand-logo-div">
               <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
@@ -255,6 +294,48 @@
             <div class="brand-logo-div">
               <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/Valentino.svg" alt=""
                   class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/Beaute-pacifique.svg"
+                  alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/elf_logo.svg" alt=""
+                  class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/Beaute-pacifique.svg"
+                  alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/elf_logo.svg" alt=""
+                  class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
             </div>
           </div>
           <div class="swiper-slide">
@@ -309,7 +390,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -353,7 +434,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -397,7 +478,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -441,7 +522,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -485,7 +566,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -529,7 +610,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -573,7 +654,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -617,7 +698,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -661,7 +742,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -705,7 +786,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -749,7 +830,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -793,7 +874,7 @@
                       </div>
                     </div>
 
-                    <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                    <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                   </div>
                   <div class="product-variants-div">
@@ -841,7 +922,6 @@
                   src="images/LOGO_floradanica-brand-assets-03-black.svg" alt="" class="logo-name-2" /></a>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="brand-logo-div">
               <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
@@ -868,14 +948,56 @@
           </div>
           <div class="swiper-slide">
             <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/elf_logo.svg" alt=""
+                  class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
               <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
                   src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
             </div>
           </div>
           <div class="swiper-slide">
             <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/Beaute-pacifique.svg"
+                  alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
               <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/elf_logo.svg" alt=""
                   class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/Beaute-pacifique.svg"
+                  alt="" class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy" src="images/elf_logo.svg" alt=""
+                  class="logo-name-2" /></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="brand-logo-div">
+              <a href="#" class="brand-logo-link w-inline-block"><img loading="lazy"
+                  src="images/Clinique-Primary-Logo.svg" alt="" class="logo-name-2" /></a>
             </div>
           </div>
 
@@ -1013,15 +1135,15 @@
         </div>
       </div>
       <div class="promo-button-wrapper">
-        <a href="/inspiration" class="more-promo-button border-radius-4px button-text w-button">
+        <a href="/inspiration" class="more-promo-button border-radius-4px button-text-13px w-button">
           Mere inspiration
         </a>
       </div>
     </section>
 
-    <!-- aktuelle-tilbud-section -->
+    <!-- aktuelle-tilbud -->
 
-    <section id="aktuelle-tilbud-section" class="aktuelle-tilbud best-seller-section">
+    <section id="aktuelle-tilbud" class="aktuelle-tilbud best-seller-section">
       <div class="best-seller-div p-b">
         <h2 class="heading-text cg-37px-600 text-282929">Aktuelle tilbud*</h2>
         <div class="best-seller-text pp-12px-500 text-282929">
@@ -1048,7 +1170,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1091,7 +1213,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1134,7 +1256,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1177,7 +1299,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1220,7 +1342,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1263,7 +1385,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1306,7 +1428,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1349,7 +1471,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1392,7 +1514,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1435,7 +1557,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1478,7 +1600,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1521,7 +1643,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1553,7 +1675,7 @@
           </div>
         </div>
       </div>
-      <a href="#" class="more-product-button border-radius-4px button-text w-button">Gå til alle tilbud</a>
+      <a href="#" class="more-product-button border-radius-4px button-text-13px w-button">Gå til alle tilbud</a>
     </section>
 
     <!-- background img -->
@@ -1561,7 +1683,7 @@
     <section class="background-img-wrapper"></section>
 
     <!-- udforsk-nyheder -->
-    <section id="udforsk-nyheder-section" class="best-seller-section udforsk-section">
+    <section id="udforsk-nyheder" class="best-seller-section udforsk-section">
       <div class="best-seller-div">
         <h2 class="heading-text cg-37px-600 text-282929">Udforsk nyheder*</h2>
         <p class="best-seller-text pp-12px-500 text-282929">TOP 20 LIGE NU</p>
@@ -1586,7 +1708,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1629,7 +1751,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1672,7 +1794,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1715,7 +1837,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1758,7 +1880,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1801,7 +1923,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1844,7 +1966,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1887,7 +2009,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1930,7 +2052,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -1973,7 +2095,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -2016,7 +2138,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -2059,7 +2181,7 @@
                     </div>
                   </div>
 
-                  <a href="#" class="button add-to-cart-button button-text p-tb w-button">Tilføj til kurv +</a>
+                  <a href="#" class="button add-to-cart-button button-text-13px p-tb w-button">Tilføj til kurv +</a>
 
                 </div>
                 <div class="product-variants-div">
@@ -2091,7 +2213,7 @@
           </div>
         </div>
       </div>
-      <a href="#" class="more-product-button button-text se-alle-nyheder-button border-radius-4px w-button">Se alle
+      <a href="#" class="more-product-button button-text-13px se-alle-nyheder-button border-radius-4px w-button">Se alle
         nyheder</a>
     </section>
 
@@ -2222,7 +2344,7 @@
             </h2>
           </div>
 
-          <p class="details-paragraph pp-12px-400 text-282929">
+          <p class="details-paragraph pp-13px-400 text-282929">
             Hos Eau De Parfum finder du et stort udvalg af billige parfumer
             fra alle de populære og mest anerkendte producenter af
             skønhedsprodukter. Du har derfor også mulighed for at finde din
@@ -2407,7 +2529,7 @@
 
       </div>
       <a href="#"
-        class="show-more-card more-product-button bg-white text-pink button-text se-alle-nyheder-button border-radius-4px w-button">Læs
+        class="show-more-card more-product-button bg-white text-pink button-text-13px se-alle-nyheder-button border-radius-4px w-button">Læs
         mere</a>
     </section>
 
@@ -2525,7 +2647,7 @@
                 <input class="email-field pp-14px-400 border-radius-4px w-input" maxlength="256" name="email"
                   data-name="Email" placeholder="Email*" type="email" id="email" required="" />
               </div>
-              <a href="#" class="submit-button button-text w-button">Tilmeld dig</a>
+              <a href="#" class="submit-button button-text-13px w-button">Tilmeld dig</a>
             </form>
             <div class="w-form-done">
               <div>Thank you! Your submission has been received!</div>
@@ -2542,7 +2664,7 @@
 
     <section class="footer-wrapper-bg">
       <div class="footer-wrapper ">
-        <img alt="" src="images/fuldt-logo.png" loading="lazy" class="footer-log" />
+        <img alt="" src="images/fuldt-logo.png" loading="lazy" class="footer-logo" />
         <!-- <div id="w-node-_419a943b-09ec-2c88-a6be-a4a83c93124c-5e73eaf4"
         class="w-layout-layout footer-text-cell wf-layout-layout">
         <div id="w-node-_419a943b-09ec-2c88-a6be-a4a83c93124d-5e73eaf4" class="w-layout-cell footer-1st-column hide">
@@ -2620,7 +2742,7 @@
 
         <!-- FOOTER (Flex version) -->
         <div class="footer-flex">
-          <div class="footer-col footer-1st-column footer-1st-row  hide">
+          <div class="footer-col footer-1st-column footer-1st-row hide">
             <h5 class="footer-heading pp-13px-600 text-282929">
               Skønhed, kvalitet og personlig service
             </h5>
@@ -2638,68 +2760,69 @@
               Rolighedsvej 111<br />
               958 Frederiksberg C<br />
               CVR-nr.: 34725594<br /><br />
-              <a href="tel:+4532165190" class="footer-link">+45 32 16 51 90</a><br />
-              <a href="mailto:info@eaudeparfum.dk" class="footer-link">info@eaudeparfum.dk</a><br />
-              <a href="#">Find os</a>
             </p>
+            <a href="tel:+4532165190" class="footer-link pp-13px-400 text-282929 line-height-1-9">+45 32 16 51
+              90</a><br />
+            <a href="mailto:info@eaudeparfum.dk"
+              class="footer-link pp-13px-400 text-282929 line-height-1-9">info@eaudeparfum.dk</a><br />
+            <a href="#" class="pp-13px-400 text-282929 line-height-1-9">Find os</a>
+
           </div>
 
           <div class="footer-col footer-3rd-column footer-1st-row">
             <h5 class="footer-heading pp-13px-600 text-282929">Information</h5>
-            <p class=" pp-13px-400 text-282929 line-height-1-9">
-              <a href="">
-                Om os<br />
-                Handelsbetingelser<br />
-                Fortrydelsesret<br />
-                Levering &amp; retur
-                <br />
-                Kontakt /Kundeservice
-              </a>
+            <a href="" class=" pp-13px-400 text-282929 line-height-1-9">
 
-
-            </p>
+              Om os<br />
+              Handelsbetingelser<br />
+              Fortrydelsesret<br />
+              Levering &amp; retur
+              <br />
+              Kontakt /Kundeservice
+            </a>
           </div>
 
-          <div id="abningstider" class="footer-col footer-4th-column footer-1st-row">
-            <h5 class="footer-heading pp-13px-600 text-282929">Åbningstider</h5>
-            <p class="pp-13px-400 text-282929 line-height-1-9">
-              Frederiksberg</br>
-              Man-fre: 10.00-17.30</br>
-              Lør: 10.00-15.00</br>
-              Søn:lukket
-            </p>
-            <h5 class="pp-13px-600 text-282929 paddding-t-16px line-height-1-9">Blokhus</h5>
-            <p class="pp-13px-400 text-282929 line-height-1-9">
-              Man: lukket </br>
-              Tir-fre: 10.00-15.00</br>
-              Lør: 10.00-15.00</br>
-              Søn: lukket
-            </p>
+          <div id="abningstider" class="footer-col footer-4th-column footer-1st-row footer-mobile-flex">
+            <div class="hours-list">
+              <h5 class="footer-heading pp-13px-600 text-282929">Åbningstider</h5>
+              <p class="pp-13px-400 text-282929 line-height-1-9">
+                Frederiksberg</br>
+                Man-fre: 10.00-17.30</br>
+                Lør: 10.00-15.00</br>
+                Søn:lukket
+              </p>
+            </div>
+            <div class="hours-list">
+              <h5 class="pp-13px-600 text-282929 paddding-t-16px line-height-1-9"> Blokhus</h5>
+              <p class="pp-13px-400 text-282929 line-height-1-9">
+                Man: lukket </br>
+                Tir-fre: 10.00-15.00</br>
+                Lør: 10.00-15.00</br>
+                Søn: lukket
+              </p>
+            </div>
           </div>
 
           <div class="footer-col footer-1st-column footer-2nd-row">
             <h5 class="footer-heading pp-13px-600 text-282929">Betalingsmuligheder</h5>
             <div class="payment-card">
-              <img loading="lazy" src="images/Skærmbillede 2025-06-23 kl. 12.00.54.png" alt="" class="card-img" />
-              <img loading="lazy" src="images/Skærmbillede 2025-06-23 kl. 12.01.01.png" alt="" class="card-img" />
-              <img loading="lazy" src="images/Skærmbillede-2025-06-23-kl.-12.01.17.png" alt="" class="card-img" />
-              <img loading="lazy" src="images/Skærmbillede 2025-06-23 kl. 12.01.26.png" alt="" class="card-img" />
-              <img loading="lazy" src="images/Skærmbillede 2025-06-23 kl. 12.01.34.png" alt="" class="card-img" />
+              <img loading="lazy" src="images/card-1png.png" alt="" class="card-img" />
+
             </div>
           </div>
 
           <div class="footer-col footer-2nd-column footer-2nd-row">
             <h5 class="footer-heading pp-13px-600 text-282929">Leveringsmetoder</h5>
             <div class="payment-card">
-              <img loading="lazy" src="images/0x0.png" alt="" class="card-img border-none" />
-              <img loading="lazy" src="images/unnamed (1).png" alt="" class="card-img border-none" />
+              <img loading="lazy" src="images/card-2.png" alt="" class="card-img" />
+
             </div>
           </div>
 
           <div class="footer-col footer-3rd-column footer-2nd-row">
             <h5 class="footer-heading pp-13px-600 text-282929">Sikker shopping</h5>
             <div class="payment-card">
-              <img loading="lazy" src="images/Koebsgaranti-DK.png" alt="" class="card-img shopping-img border-none" />
+              <img loading="lazy" src="images/Koebsgaranti-DK.png" alt="" class="card-img shopping-img" />
             </div>
           </div>
         </div>
