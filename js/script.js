@@ -100,8 +100,12 @@ function initPromoSwiper() {
       speed: 500,
       grabCursor: true,
       spaceBetween: 20,
-      slidesPerView: 1.5,
+      slidesPerView: 1.2,
+      breakpoints: {
+    430: { slidesPerView: 1.5, spaceBetween: 20 },
+  },
     });
+    
   } else if (window.innerWidth > 767 && promoSwiper) {
     promoSwiper.destroy(true, true);
     promoSwiper = null;
