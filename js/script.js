@@ -84,21 +84,25 @@ const brandSwiper = new Swiper(".brandSwiper", {
 });
 
 //promo-card
+let promoSwiper;
 
-const promoSwiper = new Swiper(".promoSwiper", {
-  loop: false,
-  speed: 500,
-  grabCursor: true,
-  spaceBetween: 20,
-  slidesPerView: 1.2,
-  // mobile
-  breakpoints: {
-    450: { slidesPerView: 1.4, spaceBetween: 20 },
-    650: { slidesPerView: 1.8, spaceBetween: 20 },
-    767: { slidesPerView: 2, spaceBetween: 20 },
-    1024: { slidesPerView: 2, spaceBetween: 40 },
-  },
-});
+function initPromoSwiper() {
+  if (window.innerWidth <= 767 && !promoSwiper) {
+    promoSwiper = new Swiper(".promoSwiper", {
+      loop: false,
+      speed: 500,
+      grabCursor: true,
+      spaceBetween: 20,
+      slidesPerView: 1.5,
+    });
+  } else if (window.innerWidth > 767 && promoSwiper) {
+    promoSwiper.destroy(true, true);
+    promoSwiper = null;
+  }
+}
+
+initPromoSwiper();
+window.addEventListener("resize", initPromoSwiper);
 
 //review
 const reviewSwiper = new Swiper(".review-swiper", {

@@ -472,6 +472,18 @@
         font-size: 30px;
     }
 
+    .promo-button-wrapper {
+        display: none;
+    }
+
+    .promoSwiper .swiper-wrapper {
+        flex-wrap: nowrap;
+        gap: 0px;
+    }
+
+    .promoSwiper .swiper-slide:nth-child(n+4) {
+        display: block;
+    }
 
     .background-img-wrapper {
         height: 300px;

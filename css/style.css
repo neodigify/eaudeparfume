@@ -753,9 +753,21 @@ h3 {
 
 
 /* promo/blog */
+
+.promoSwiper .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.promoSwiper .swiper-slide {
+  width: calc((100% - 40px) / 3);
+  flex: 0 0 auto;
+}
+
 .promo-card-section-wrapper {
   width: 100%;
-  max-width: 830px;
+  max-width: var(--1204px);
   margin: auto;
   padding: 60px 20px;
 }
@@ -790,6 +802,15 @@ h3 {
   height: 100%;
 }
 
+.promo-button-wrapper {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.promoSwiper .swiper-slide:nth-child(n+4) {
+  display: none;
+}
+
 /* .swiper.promoSwiper {
   overflow: visible !important;
 } */
@@ -801,7 +822,8 @@ h3 {
 
 /* more product button */
 
-.more-product-button {
+.more-product-button,
+.more-promo-button {
   vertical-align: baseline;
   padding: 20px 35px;
   display: inline-block;
