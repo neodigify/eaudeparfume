@@ -795,20 +795,18 @@ h3 {
 
 /* brand-slider */
 
-/* .brand-slider-wrapper .swiper-wrapper {
+ .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
-} */
-
-.brand-slider-wrapper .swiper-wrapper {
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-  animation-play-state: running;
+ 
 }
 
-.brand-slider-wrapper .swiper.paused .swiper-wrapper {
-  animation-play-state: paused;
+.swiper-wrapper.active {
+    -webkit-transition-timing-function: unset !important;
+  transition-timing-function: unset !important;
+
 }
+
 
 .brand-slider-wrapper {
   width: 100%;

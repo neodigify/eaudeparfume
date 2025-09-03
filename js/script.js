@@ -72,13 +72,14 @@ const swiper = new Swiper(".swiperProduct", {
 //brand-logo
 const brandSwiper = new Swiper(".brandSwiper", {
   loop: true,
-  speed: 1500,
+  speed: 3500,
   grabCursor: true,
   centeredSlides: true,
   autoplay: true,
   autoplay: {
     delay: 0,
     disableOnInteraction: true,
+    pauseOnMouseEnter:true,
   },
   slidesPerView: 2, // mobile default
   spaceBetween: 20,
@@ -89,6 +90,13 @@ const brandSwiper = new Swiper(".brandSwiper", {
     1024: { slidesPerView: 6, spaceBetween: 60 }, // desktop
   },
 });
+
+//toggle active
+
+  document.querySelectorAll('.brandSwiper .swiper-wrapper').forEach(w => {
+    w.addEventListener('pointerenter', () => w.classList.add('active'));
+    w.addEventListener('pointerleave', () => w.classList.remove('active'));
+  });
 
 //promo-card
 let promoSwiper;
