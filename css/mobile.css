@@ -1,8 +1,8 @@
 @media screen and (max-width: 991px) {
     .main-menu-wrapper {
         width: var(--100);
-        grid-column-gap: 60px;
-        grid-row-gap: 60px;
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
         flex-flow: wrap;
         align-items: center;
         padding-top: 40px;
@@ -11,6 +11,11 @@
 
     .search-wrapper.desktop {
         display: none;
+    }
+
+    .hamburger-menu {
+        width: 30px;
+        /* padding-right: 20px; */
     }
 
     .search-wrapper.mobile {
@@ -57,10 +62,6 @@
     } */
 
 
-    .hamburger-menu {
-        width: 30px;
-        cursor: pointer;
-    }
 
     .hamburger-menu,
     .mobile-logo {
@@ -443,13 +444,6 @@
         overflow: visible;
     } */
 
-    .main-menu-wrapper.pp-12px-500.text-282828 {
-        grid-column-gap: 40px;
-        grid-row-gap: 40px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
     .mobile-hero-wrapper {
         height: auto;
     }
@@ -478,17 +472,11 @@
         font-size: 30px;
     }
 
-    .promo-button-wrapper {
-        display: none;
-    }
+
 
     .promoSwiper .swiper-wrapper {
         flex-wrap: nowrap;
         gap: 0px;
-    }
-
-    .promoSwiper .swiper-slide:nth-child(n+4) {
-        display: block;
     }
 
     .background-img-wrapper {
@@ -657,6 +645,20 @@
         width: calc(-31.5152px + 30.303vw);
         max-width: unset;
     }
+
+    .main-menu-wrapper {
+        grid-column-gap: 0px;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .main-logo-link-wrapper {
+        width: calc(100% - 156px);
+
+    }
 }
 
 @media screen and (max-width: 479px) {
@@ -676,11 +678,6 @@
         padding-bottom: 40px;
     }
 
-    .hamburger-menu {
-        width: 20px;
-        cursor: pointer;
-    }
-
     .main-container {
         overflow: hidden;
     }
@@ -690,10 +687,7 @@
         height: 100px;
     }
 
-    .wishlist-icon,
-    .cart-icon {
-        width: 15px;
-    }
+
 
 
 
@@ -702,20 +696,16 @@
         line-height: 1em;
     }
 
-    .main-menu-wrapper.pp-12px-500.text-282828 {
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
-    }
 
     .logo {
-        width: var(--100);
-        max-width: 150px;
-        height: auto;
+        padding: unset;
     }
 
     .mobile-hero-wrapper {
         height: auto;
     }
+
+
 
 
     .mobile-hero-heading.cg-37px-600 {

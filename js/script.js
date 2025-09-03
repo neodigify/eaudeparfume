@@ -79,6 +79,7 @@ const brandSwiper = new Swiper(".brandSwiper", {
   autoplay: {
     delay: 0,
     disableOnInteraction: true,
+    pauseOnMouseEnter: true,
   },
   slidesPerView: 2, // mobile default
   spaceBetween: 20,
@@ -88,6 +89,12 @@ const brandSwiper = new Swiper(".brandSwiper", {
     768: { slidesPerView: 5, spaceBetween: 40 },
     1024: { slidesPerView: 6, spaceBetween: 60 }, // desktop
   },
+  // on: {
+  //   init(swiper) {
+  //     swiper.el.addEventListener("mouseenter", () => swiper.autoplay.stop());
+  //     swiper.el.addEventListener("mouseleave", () => swiper.autoplay.start());
+  //   },
+  // },
 });
 
 //promo-card
