@@ -233,9 +233,9 @@
         padding-top: 40px;
     }
 
-    .testimonial-section-wrapper.pp-16px-500.color-282929 {
-        padding-top: 60px;
-        padding-bottom: 60px;
+    .testimonial-section-wrapper {
+        padding: 60px 20px;
+
     }
 
     .review-card {
@@ -667,15 +667,13 @@
         grid-row-gap: 20px;
     }
 
-    .logo-name {
+    .logo {
         width: var(--100);
-        max-width: 120px;
+        max-width: 150px;
+        height: auto;
     }
 
-    .logo-img {
-        width: var(--100);
-        max-width: 25px;
-    }
+
 
     .mobile-hero-wrapper {
         height: auto;

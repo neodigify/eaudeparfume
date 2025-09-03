@@ -51,19 +51,16 @@ const categorySwiper = new Swiper(".categorySwiper", {
 const swiper = new Swiper(".swiperProduct", {
   loop: false,
   grabCursor: true,
-  // autoplay: { delay: 2800, disableOnInteraction: false },
   speed: 500,
   slidesPerView: 1.5,
   spaceBetween: 16,
-  // pagination: { el: ".swiper-pagination", clickable: true },
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
+
   breakpoints: {
     450: { slidesPerView: 2.1, spaceBetween: 20 },
     500: { slidesPerView: 2.4, spaceBetween: 20 },
-    767: { slidesPerView: 3, spaceBetween: 20 },
+    650: { slidesPerView: 2.8, spaceBetween: 20 },
+    730: { slidesPerView: 3, spaceBetween: 20 },
+    800: { slidesPerView: 3.5, spaceBetween: 20 },
     860: { slidesPerView: 4, spaceBetween: 24 },
     1024: { slidesPerView: 5, spaceBetween: 28 },
   },

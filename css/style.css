@@ -313,15 +313,6 @@ h3 {
   text-decoration: none;
 }
 
-.main-logo-link {
-  grid-column-gap: 5px;
-  grid-row-gap: 5px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  text-decoration: none;
-}
-
 
 .logo-wrapper-div {
   justify-content: center;
@@ -329,14 +320,9 @@ h3 {
   display: block;
 }
 
-.logo-name {
-  width: auto;
+.logo {
+  height: auto;
   max-width: 203px;
-}
-
-.logo-img {
-  width: auto;
-  max-width: 45px;
 }
 
 .search-wrapper {
