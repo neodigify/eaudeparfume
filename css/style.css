@@ -160,7 +160,6 @@ h3 {
   line-height: 1.5em;
   color: #282929;
 }
-
 .pp-14px-600 {
   font-family: Poppins, sans-serif;
   font-size: 14px;
@@ -268,7 +267,7 @@ h3 {
 .desktop-row>p {
   border-right: 1px solid var(--white);
   font-family: Poppins, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 1.2em;
 }
@@ -442,7 +441,7 @@ h3 {
 
 .hero-div {
   height: var(--100);
-  grid-column-gap: 10px;
+  grid-column-gap: 15px;
   grid-row-gap: 10px;
 }
 
