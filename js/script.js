@@ -28,8 +28,11 @@ const mobileSwiper = new Swiper(".mobile-hero-swiper", {
   spaceBetween: 20,
   slidesPerView: 1,
   breakpoints: {
-    550: { slidesPerView: 1.3, spaceBetween: 5 },
-    767: { slidesPerView: 1.5, spaceBetween: 5 },
+    450: { slidesPerView: 1.2, spaceBetween: 20 },
+    550: { slidesPerView: 1.5, spaceBetween: 20 },
+    650: { slidesPerView: 1.7, spaceBetween: 20 },
+    767: { slidesPerView: 1.8, spaceBetween: 20 },
+    800: { slidesPerView: 2, spaceBetween: 20 },
   },
   autoplay: {
     delay: 5000,

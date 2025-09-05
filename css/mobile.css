@@ -42,7 +42,7 @@
 
 @media screen and (min-width:991px) {
     .fixed-w-645 {
-        width: 155px !important;
+        width: 145px !important;
     }
 
     .footer-1st-column.footer-2nd-row {
@@ -104,7 +104,13 @@
     .header-top-bar-wrapper {
         width: 100%;
     }
+    .discount-circle.discount-circle-mobile {
+        display: block;
+        inset: 120px auto auto calc(100% - 160px);
+        width: 140px;
+        height: 140px;
 
+    }
     .desktop-row {
         display: none;
     }
@@ -120,7 +126,9 @@
     .hero-wrapper {
         display: none;
     }
-
+    .swiper {
+        overflow: visible !important;
+    }
 
     /* Show menu when active */
     /* .nav-menu-container.active {
@@ -248,16 +256,6 @@
         flex-flow: column;
         display: flex;
     }
-
-    .discount-circle.discount-circle-mobile {
-        display: block;
-        inset: 55px auto auto calc(100% - 160px);
-        width: 140px;
-        height: 140px;
-
-    }
-
-
 
     /* best-seller */
 
@@ -576,35 +574,21 @@
         max-width: unset;
     }
 
-    /*     .swiper-slide {
-        margin-right: 20px !important;
-    } */
-
-    .swiper {
-        overflow: visible !important;
-    }
-
-    /* .swiper.swiperProduct {
-        overflow: visible;
-    } */
-
     .mobile-hero-wrapper {
         height: auto;
     }
 
-
-
-    .mobile-hero-content {
+    /* .mobile-hero-content {
         max-width: calc(100% - 170px);
         width: 100%;
-    }
+    } */
 
     .image-2 {
         height: var(--100);
     }
 
     .mobile-hero {
-        height: 80vw;
+        height: 500px;
     }
 
     .best-seller-div.p-b {
@@ -793,6 +777,9 @@
     .footer-heading-blokhus.line-height-1-9 {
         line-height: 1.2em !important;
     }
+        .contact-heading {
+        max-width: 345px;
+    }
 
 }
 
@@ -819,6 +806,14 @@
 
     }
 
+    .discount-circle.discount-circle-mobile {
+        display: block;
+        inset: 55px auto auto calc(100% - 120px);
+        width: 100px;
+        height: 100px;
+
+    }
+
     .payment-card {
         max-width: calc(100vw - 40px);
     }
@@ -831,12 +826,16 @@
 
 @media screen and (max-width: 479px) {
     img.discount-circle.discount-circle-mobile {
-        inset: 20px auto auto calc(100% - 130px);
+        inset: 100px auto auto calc(100% - 130px);
     }
 
-    .mobile-hero-heading {
+    /* .mobile-hero-heading {
         max-width: 250px;
         margin-top: 100px;
+    } */
+
+    .mobile-hero{
+        height: 400px;
     }
 
     .mobile-hero-content {
@@ -861,15 +860,6 @@
     .main-container {
         overflow: hidden;
     }
-
-    .discount-circle.discount-circle-mobile {
-        width: 100px;
-        height: 100px;
-    }
-
-
-
-
 
     .logo {
         padding: unset;
@@ -914,9 +904,10 @@
         padding-right: 0;
     }
 
-    .contact-heading {
-        max-width: 250px;
-        margin-top: 65px;
+
+
+    .contact-email-div{
+        padding-top: 75px;
     }
 
     .footer-col {
