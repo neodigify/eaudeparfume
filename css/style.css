@@ -300,6 +300,9 @@ h3 {
   display: flex;
 }
 
+.menu-icon{
+  cursor: pointer;
+}
 
 .main-menu-wrapper {
   width: var(--100);
