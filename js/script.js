@@ -48,9 +48,6 @@ const categorySwiper = new Swiper(".categorySwiper", {
   slidesPerView: 3.3,
   breakpoints: {
     545: { slidesPerView: 4.3, spaceBetween: 5 },
-    // 480: { slidesPerView: 4.1, spaceBetween: 5 },
-    // 600: { slidesPerView: 3.5, spaceBetween: 5 },
-    // 650: { slidesPerView: 4.5, spaceBetween: 5 },
     768: { slidesPerView: 6.3, spaceBetween: 5 },
     850: { slidesPerView: 6.5, spaceBetween: 20 },
     1000: { slidesPerView: 6.8, spaceBetween: 20 },
