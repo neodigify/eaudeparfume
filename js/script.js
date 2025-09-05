@@ -23,10 +23,18 @@ window.addEventListener("resize", initSwiper);
 
 //mobile hero
 const mobileSwiper = new Swiper(".mobile-hero-swiper", {
-  loop: false,
+  loop: true,
   grabCursor: true,
   spaceBetween: 20,
   slidesPerView: 1,
+  breakpoints: {
+    550: { slidesPerView: 1.3, spaceBetween: 5 },
+    767: { slidesPerView: 1.5, spaceBetween: 5 },
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 });
 
 //category
@@ -42,7 +50,8 @@ const categorySwiper = new Swiper(".categorySwiper", {
     // 650: { slidesPerView: 4.5, spaceBetween: 5 },
     768: { slidesPerView: 6.3, spaceBetween: 5 },
     850: { slidesPerView: 6.5, spaceBetween: 20 },
-    1000: { slidesPerView: 7, spaceBetween: 20 },
+    1000: { slidesPerView: 6.8, spaceBetween: 20 },
+    1100: { slidesPerView: 7, spaceBetween: 20 },
     1300: { slidesPerView: 8, spaceBetween: 20 },
   },
 });
@@ -79,7 +88,7 @@ const brandSwiper = new Swiper(".brandSwiper", {
   autoplay: {
     delay: 0,
     disableOnInteraction: true,
-    pauseOnMouseEnter:true,
+    pauseOnMouseEnter: true,
   },
   slidesPerView: 2, // mobile default
   spaceBetween: 20,
@@ -93,28 +102,34 @@ const brandSwiper = new Swiper(".brandSwiper", {
 
 //toggle active
 
-  document.querySelectorAll('.brandSwiper .swiper-wrapper').forEach(w => {
-    w.addEventListener('pointerenter', () => w.classList.add('active'));
-    w.addEventListener('pointerleave', () => w.classList.remove('active'));
-  });
+document.querySelectorAll(".brandSwiper .swiper-wrapper").forEach((w) => {
+  w.addEventListener("pointerenter", () => w.classList.add("active"));
+  w.addEventListener("pointerleave", () => w.classList.remove("active"));
+});
 
 //promo-card
 let promoSwiper;
 
 function initPromoSwiper() {
-  if (window.innerWidth <= 767 && !promoSwiper) {
+  if (window.innerWidth <= 991 && !promoSwiper) {
     promoSwiper = new Swiper(".promoSwiper", {
       loop: false,
       speed: 500,
       grabCursor: true,
       spaceBetween: 20,
-      slidesPerView: 1.2,
+      slidesPerView: 1,
       breakpoints: {
-    430: { slidesPerView: 1.5, spaceBetween: 20 },
-  },
+        370: { slidesPerView: 1.2, spaceBetween: 20 },
+        450: { slidesPerView: 1.4, spaceBetween: 20 },
+        500: { slidesPerView: 1.6, spaceBetween: 20 },
+        560: { slidesPerView: 1.8, spaceBetween: 20 },
+        650: { slidesPerView: 2, spaceBetween: 20 },
+        720: { slidesPerView: 2.2, spaceBetween: 20 },
+        830: { slidesPerView: 2.5, spaceBetween: 20 },
+        920: { slidesPerView: 2.7, spaceBetween: 20 },
+      },
     });
-    
-  } else if (window.innerWidth > 767 && promoSwiper) {
+  } else if (window.innerWidth > 991 && promoSwiper) {
     promoSwiper.destroy(true, true);
     promoSwiper = null;
   }
@@ -135,12 +150,11 @@ const reviewSwiper = new Swiper(".review-swiper", {
     1024: { slidesPerView: 3, spaceBetween: 28 },
     1400: { slidesPerView: 3, spaceBetween: 80 },
   },
-  // render your custom tiny dots into the existing container
+
   pagination: {
     el: ".review-slider-bullet",
     clickable: true,
     renderBullet: function (index, className) {
-      // className includes 'swiper-pagination-bullet' and 'swiper-pagination-bullet-active' when active
       return (
         '<span class="slider-button slider-buttton-inactive ' +
         className +
@@ -156,44 +170,36 @@ const reviewSwiper = new Swiper(".review-swiper", {
   // how many words to show initially
   const WORD_LIMIT = 15;
 
-  // Utility: build a truncated plain-text preview with ellipsis
   function makePreview(text, limit) {
-    // Normalize whitespace
     const words = text.trim().replace(/\s+/g, " ").split(" ");
     if (words.length <= limit) return text.trim();
     return words.slice(0, limit).join(" ") + "…";
   }
 
-  // Initialize each review card
   function initReviewCard(card) {
     const textEl = card.querySelector(".review-text");
     const btn = card.querySelector(".see-more");
     if (!textEl || !btn) return;
 
-    // Store the full HTML (to restore formatting like <strong>, <br>, etc.)
     const fullHTML = textEl.innerHTML.trim();
     const plainText = textEl.textContent || textEl.innerText || "";
 
     const previewText = makePreview(plainText, WORD_LIMIT);
 
-    // If no truncation needed, keep button hidden
     if (plainText.trim().replace(/\s+/g, " ").split(" ").length <= WORD_LIMIT) {
       btn.style.display = "none";
       return;
     }
 
-    // Save for toggling
     textEl.dataset.fullHtml = fullHTML;
     textEl.dataset.previewText = previewText;
 
-    // Set initial truncated (plain text) view
     textEl.textContent = previewText;
     btn.style.display = "inline-block";
     btn.textContent = "Læs mere";
     btn.setAttribute("aria-expanded", "false");
   }
 
-  // Toggle handler (event delegation to cover dynamically added slides too)
   document.addEventListener("click", function (e) {
     const btn = e.target.closest(".see-more");
     if (!btn) return;
@@ -206,19 +212,16 @@ const reviewSwiper = new Swiper(".review-swiper", {
     const expanded = btn.getAttribute("aria-expanded") === "true";
 
     if (expanded) {
-      // Collapse to preview
       textEl.textContent = textEl.dataset.previewText || "";
       btn.textContent = "Læs mere";
       btn.setAttribute("aria-expanded", "false");
     } else {
-      // Expand to full HTML
       textEl.innerHTML = textEl.dataset.fullHtml || textEl.innerHTML;
       btn.textContent = "Se mindre";
       btn.setAttribute("aria-expanded", "true");
     }
   });
 
-  // Kick off on DOM ready
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".review-card").forEach(initReviewCard);
   });
@@ -273,12 +276,10 @@ const hamburger = document.querySelector(".hamburger-menu");
 const navMenu = document.querySelector(".nav-menu-container");
 const menuItems = document.querySelectorAll(".menu-item");
 
-// Toggle menu open/close
 hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Close menu when clicking a link
 menuItems.forEach((item) => {
   item.addEventListener("click", () => {
     navMenu.classList.remove("active");

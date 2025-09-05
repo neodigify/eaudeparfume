@@ -26,7 +26,7 @@ a:-webkit-any-link {
   text-decoration: unset;
 }
 
-a{
+a {
   transition: all 0.3s ease;
 }
 
@@ -74,7 +74,11 @@ a {
 
 .body {
   height: var(--100);
-  line-height: 1.2em;
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #282929;
 }
 
 h3 {
@@ -89,21 +93,29 @@ h3 {
   line-height: 1.2em;
 }
 
-.cg-47px-600 {
-  font-family: Cormorant Garamond, sans-serif;
-  font-weight: 600;
-  text-align: center;
+.pp-12px-500-mh-c {
+  font-family: Poppins, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  color: #282929;
   text-transform: uppercase;
-  font-size: 47px;
-  line-height: 1.08em;
 }
 
-.cg-37px-600 {
+
+.h1-cg-37px-600,
+.h2-cg-37px-600,
+.h3-cg-37px-600,
+.h4-cg-37px-600 {
   font-family: Cormorant Garamond, sans-serif;
   font-size: 37px;
   font-weight: 600;
-  line-height: 1em;
+  line-height: 1.2em;
+  color: #282929;
 }
+
+
 
 .pp-13px-500 {
   font-family: Poppins, sans-serif;
@@ -123,16 +135,10 @@ h3 {
   font-family: Cormorant Garamond, sans-serif;
   font-size: 20px;
   font-weight: 600;
+  line-height: 1.2em;
 }
 
 
-
-.pp-15px-400 {
-  font-family: Poppins, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.6em;
-}
 
 .text-white {
   color: var(--white);
@@ -151,7 +157,16 @@ h3 {
   font-family: Poppins, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.2em;
+  line-height: 1.5em;
+  color: #282929;
+}
+
+.pp-14px-600 {
+  font-family: Poppins, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #282929;
 }
 
 .promo-paragraph {
@@ -180,12 +195,6 @@ h3 {
   line-height: 1.2em;
 }
 
-.pp-11px-400 {
-  font-family: Poppins, sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.2em;
-}
 
 .text-282828 {
   color: #282828;
@@ -206,7 +215,7 @@ h3 {
 
 .header-wrapper {
   width: var(--100);
-  max-width: var(--1290px);
+  max-width: var(--1380px);
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -216,7 +225,7 @@ h3 {
 }
 
 .header-top-bar-wrapper {
-  max-width: var(--1380px);
+  width: 100%;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
@@ -231,10 +240,8 @@ h3 {
 
 .full-width-bg {
   width: 100vw;
-  /* full viewport width */
   position: relative;
   background-color: var(--aa5291);
-  /* your background color */
   overflow: hidden;
 }
 
@@ -249,11 +256,13 @@ h3 {
 /* Desktop row */
 .desktop-row {
   width: 100%;
+  max-width: 1300px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px;
   color: var(--white);
+  margin: auto;
 }
 
 .desktop-row>p {
@@ -295,15 +304,12 @@ h3 {
 
 .main-menu-wrapper {
   width: var(--100);
-  max-width: var(--1290px);
+  max-width: var(--1380px);
   align-items: center;
   justify-content: space-between;
   display: flex;
   padding: 40px 0px 0px 0px;
 }
-
-
-
 
 .nav-menu-container {
   max-width: 446px;
@@ -311,7 +317,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
   display: flex;
-  padding-left: 14px;
 }
 
 
@@ -342,7 +347,7 @@ h3 {
   padding: 12px;
   display: flex;
   width: var(--100);
-  max-width: 315px;
+  width: 315px;
   grid-column-gap: 15px;
   grid-row-gap: 15px;
   border-radius: 4px;
@@ -350,6 +355,7 @@ h3 {
 }
 
 .search-text {
+  width: 100%;
   border: none;
   outline: none;
   font-size: 12px;
@@ -420,22 +426,26 @@ h3 {
 
 .hero-wrapper {
   width: var(--100);
+  max-width: 2000px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px 20px 40px;
   display: block;
+
+}
+
+.hero-heading {
+  max-width: 350px;
+  margin: auto;
+  padding: 0px 0px 10px;
 }
 
 .hero-div {
-  /* height: var(--100); */
-  height: 41vw;
+  height: var(--100);
   grid-column-gap: 10px;
   grid-row-gap: 10px;
 }
 
-.hero-first-col-wrapper {
-  max-width: 16vw;
-}
 
 .hero-div .w-layout-cell {
   position: relative;
@@ -445,52 +455,29 @@ h3 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 7.5em 1.875em 3.75em;
+
+  padding: 120px 30px 60px;
   background-color: var(--abbcab);
   color: var(--273a2a);
 }
 
 .hero-button {
   position: absolute;
-  bottom: 3.75em;
-}
-
-.p-634vw {
-  font-size: 0.634vw;
-}
-
-.p-73vw {
-  font-size: 0.73vw !important;
-}
-
-
-.h1-2-45vw {
-  font-size: 2.45vw;
-}
-
-.hero-heading-02 {
-  color: var(--273a2a);
-}
-
-.pp-16px-400 {
-  font-family: Poppins, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.4em;
-}
-
-.hero-p.pp-14px-400 {
-  line-height: 1.4em;
+  bottom: 60px;
 }
 
 .hero-padding-bottom {
-  padding-bottom: 6.25em;
+  padding-bottom: 100px;
+}
+
+.hero-p {
+  max-width: 300px;
+  margin: auto;
 }
 
 .hero-2nd-div {
   background-image: url('../images/olena-bohovyk-wV0OrCO90eI-unsplash.jpg');
-
-  padding-bottom: 3.75em;
+  padding-bottom: 60px;
   position: relative;
 }
 
@@ -506,7 +493,7 @@ h3 {
 
 .hero-3rd {
   background-image: url('../images/IMG_6358.JPG');
-  padding-bottom: 3.75em;
+  padding-bottom: 60px;
 
 }
 
@@ -517,28 +504,18 @@ h3 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  width: 9vw;
-  height: 9vw;
+  width: 168px;
+  height: 168px;
   display: flex;
   position: absolute;
   top: 55px;
-  left: 26vw;
+  left: calc(100% - 100px);
 }
 
 /* button */
 
-
-
-.button.btn-p {
-  padding: 15px 25px;
-}
-
-.border-radius-em {
-  border-radius: 0.321em;
-}
-
-.btn-p-em {
-  padding: 1.6em 2em;
+.btn-p {
+  padding: 20px 35px;
 }
 
 .button.bg-273a2a {
@@ -636,16 +613,23 @@ h3 {
   display: flex;
 }
 
-.promo-card-section-wrapper .promoSwiper, .product-collection-grid {
+.promo-card-section-wrapper .promoSwiper,
+.product-collection-grid {
   padding-bottom: 130px;
 }
-.bottom-padding-0{
+
+.product-collection-grid .product-size .pp-11px-400 {
+  line-height: 1em !important;
+}
+
+.bottom-padding-0 {
   padding-bottom: 0px !important;
 }
 
-.bottom-padding-40px{
+.bottom-padding-40px {
   padding-bottom: 40px !important;
 }
+
 .product-title-text {
   text-align: left;
   padding-top: 2px;
@@ -719,7 +703,7 @@ h3 {
 }
 
 
-.product-badge-wishlist {
+.product-img {
   background-image: url('../images/Group-1-1.jpg');
   background-position: 50%;
   background-repeat: no-repeat;
@@ -740,9 +724,16 @@ h3 {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
-  width: 44px;
-  height: 44px;
+  text-align: center;
+  width: 45px;
+  height: 47px;
   display: flex;
+  position: relative;
+}
+
+.discount-amount {
+  padding-bottom: 2px;
+  position: absolute;
 }
 
 .add-to-cart-button {
@@ -757,36 +748,37 @@ h3 {
   padding-bottom: 15px;
 }
 
-.image {
-  max-width: 17px;
+.wishlist-image {
+  max-width: 20px;
+  padding-top: 5px;
 }
 
-.promoSwiper, .product-collection-grid {
+.promoSwiper,
+.product-collection-grid {
   display: block;
 }
 
 
 /* container only */
 
-/* Let Swiper manage layout/widths; remove old 20% width inside the slider */
+
 .swiperProduct .product-card {
   width: auto;
   max-width: none;
 }
 
-/* Make slides auto-height (so cards expand naturally) */
+
 .swiperProduct .swiper-slide {
   height: auto;
   display: block;
 }
 
-/* Space for bullets/arrows if you enable them + allow peek */
 .swiperProduct {
   padding: 8px 0 32px;
   overflow: visible;
 }
 
-/* (optional) if any global rule sets justify-content: space-between on wrappers */
+
 .swiperProduct .swiper-wrapper {
   justify-content: flex-start !important;
   align-items: stretch;
@@ -795,14 +787,14 @@ h3 {
 
 /* brand-slider */
 
- .swiper-wrapper {
+.swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
- 
+
 }
 
 .swiper-wrapper.active {
-    -webkit-transition-timing-function: unset !important;
+  -webkit-transition-timing-function: unset !important;
   transition-timing-function: unset !important;
 
 }
@@ -911,7 +903,7 @@ h3 {
 
 /* more product button */
 
-.more-product-button{
+.more-product-button {
   vertical-align: baseline;
   padding: 20px 35px;
   display: inline-block;
@@ -924,7 +916,7 @@ h3 {
   display: inline-block;
 }
 
-.more-product-button:hover{
+.more-product-button:hover {
   color: #fff;
   background-color: #aa5291;
 }
@@ -946,12 +938,6 @@ h3 {
 .more-promo-button:hover {
   color: #fff;
   background-color: var(--273a2a);
-}
-.pp-15px-500 {
-  font-family: Poppins, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.2em;
 }
 
 .aktuelle-tilbud.best-seller-section {
@@ -986,8 +972,6 @@ h3 {
 /* textimonial */
 .testimonial-section-wrapper {
   background-color: #c3cdc2;
-  /* margin-top: 100px;
-  margin-bottom: 20px; */
   padding: 100px 80px;
   margin-top: auto;
   margin-bottom: auto;
@@ -998,7 +982,7 @@ h3 {
 }
 
 
-/* let card fill */
+
 .review-card.border {
   display: flex;
   flex-direction: column;
@@ -1011,11 +995,6 @@ h3 {
 .review-text {
   line-height: 1.9em;
 }
-
-/* .round-star-img {
-  width: 10px;
-  height: 10px;
-} */
 
 .testimonials-heading {
   text-align: center;
@@ -1055,12 +1034,7 @@ h3 {
   line-height: 1.2em;
 }
 
-.p-68vw {
-  font-size: 0.68vw;
-  font-weight: 600;
-  font-family: Poppins, sans-serif;
-  line-height: 1.2em;
-}
+
 
 .button-text-13px {
   font-size: 13px;
@@ -1079,6 +1053,11 @@ h5 {
   grid-row-gap: 1px;
   display: flex;
 } */
+
+.rating-div {
+  margin-top: -15px;
+}
+
 .rating-star {
   width: 55px;
   height: auto;
@@ -1128,7 +1107,7 @@ h5 {
   height: 56px;
 }
 
-/* Swiper container replaces old .review-wrapper flex row */
+
 .review-swiper {
   max-width: 1380px;
   margin: 70px auto 0;
@@ -1190,12 +1169,12 @@ h5 {
   max-width: calc(50% - 60px);
 }
 
-/* Hide all cards after the 2nd on desktop */
+
 .details-div-wrapper .details-div:nth-child(n+3) {
   display: none;
 }
 
-/* Show all when toggled */
+
 .details-div-wrapper.show-all .details-div {
   display: block;
 }
@@ -1339,13 +1318,6 @@ h5 {
   padding-bottom: 10px;
 }
 
-.pp-16px-500 {
-  font-family: Poppins, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 1.2em;
-}
-
 
 .name-field,
 .email-field {
@@ -1390,6 +1362,7 @@ h5 {
 .contact-heading {
   max-width: 550px;
   margin-top: 10px;
+
 }
 
 
@@ -1517,7 +1490,8 @@ ol {
   width: calc(100% - 645px);
 }
 
-.payment-card, .payment-card-2 {
+.payment-card,
+.payment-card-2 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
