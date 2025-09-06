@@ -42,11 +42,11 @@
 
 @media screen and (min-width:991px) {
     .fixed-w-645 {
-        width: 145px !important;
+        width: 180px !important;
     }
 
-    .footer-1st-column.footer-2nd-row {
-        width: calc(100% - 645px);
+    .footer-1st-column.footer-2nd-row, .footer-1st-column {
+        width: calc(100% - 720px);
 
     }
 
@@ -931,5 +931,6 @@
     #uid-_419a943b-09ec-2c88-a6be-a4a83c931297-5e73eaf4 {
         grid-area: span 1 / span 1 / span 1 / span 1;
     }
+
 
 }
