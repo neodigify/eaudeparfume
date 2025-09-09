@@ -250,7 +250,10 @@ h3 {
   margin: auto;
   padding: 0 20px;
   display: flex;
+  position: relative;
 }
+
+
 
 .header-top-bar-wrapper {
   width: 100%;
@@ -1698,7 +1701,7 @@ ol {
   text-align: center;
   background-color: var(--aa5291);
   display: block;
-  padding: 13px 100px 12px 100px;
+  padding: 14px 100px 12px 100px;
 }
 
 
