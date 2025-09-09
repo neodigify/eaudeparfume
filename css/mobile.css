@@ -657,10 +657,10 @@
     }
 
 
-    body.modal-open .product-card-badge-mobile,
+    /* body.modal-open .product-card-badge-mobile,
     body.modal-open .product-card-wishlist-mobile {
         display: none !important;
-    }
+    } */
 
     /*  Mobile Modal (separate)  */
     .mobile-img-modal {
@@ -754,10 +754,6 @@
         z-index: 2;
     }
 
-    body.modal-open .product-card-badge-mobile,
-    body.modal-open .product-card-wishlist-mobile {
-        display: none !important;
-    }
 
     .mobile-img-modal[aria-hidden="false"] {
         display: flex;
