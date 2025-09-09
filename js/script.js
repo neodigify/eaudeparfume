@@ -285,3 +285,289 @@ menuItems.forEach((item) => {
     navMenu.classList.remove("active");
   });
 });
+
+// details page slider
+
+// accordion
+const accordions = document.querySelectorAll(".mobile .accordion-item");
+
+accordions.forEach((item) => {
+  const header = item.querySelector(".accordion-header");
+
+  header.addEventListener("click", () => {
+    // Close all other accordions
+    accordions.forEach((i) => {
+      if (i !== item) {
+        i.classList.remove("active");
+      }
+    });
+
+    // Toggle current accordion
+    item.classList.toggle("active");
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Mobile product card slider
+  const mobileDetailsSwiper = new Swiper(".product-card-slider-mobile", {
+    loop: false,
+    centeredSlides: true,
+    slidesPerView: 1,
+    spaceBetween: 10,
+    speed: 500,
+    pagination: {
+      el: ".product-card-pagination-mobile",
+      clickable: true,
+    },
+  });
+
+  /* Mobile Modal*/
+  const mobileModalEl = document.getElementById("mobileImgModal");
+  const mobileModalClose = document.getElementById("mobileImgModalClose");
+
+  const mobileModalSwiper = new Swiper(".mobile-modal-gallery", {
+    loop: false,
+    speed: 350,
+    spaceBetween: 15,
+    slidesPerView: 1,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".mobile-modal-gallery .swiper-button-next",
+      prevEl: ".mobile-modal-gallery .swiper-button-prev",
+    },
+    pagination: {
+      el: ".mobile-modal-gallery .swiper-pagination",
+      clickable: true,
+    },
+    keyboard: { enabled: true },
+    observer: true,
+    observeParents: true,
+  });
+
+  function rebuildMobileModalFromCard() {
+    const wrapper = document.querySelector(
+      ".mobile-modal-gallery .swiper-wrapper"
+    );
+    if (!wrapper) return;
+
+    const imgs = document.querySelectorAll(
+      ".product-card-slider-mobile .swiper-slide img"
+    );
+
+    wrapper.innerHTML = "";
+    imgs.forEach((img) => {
+      const src =
+        img.getAttribute("data-full") ||
+        img.getAttribute("data-src") ||
+        img.src;
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `<img class="mobile-modal-image" src="${src}" alt="">`;
+      wrapper.appendChild(slide);
+    });
+
+    mobileModalSwiper.update();
+  }
+
+  function openMobileModalAt(index) {
+    rebuildMobileModalFromCard();
+    // show modal
+    document.body.classList.add("modal-open"); // <-- add this
+    mobileModalEl.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+
+    // go to same image
+    const max = mobileModalSwiper.slides.length - 1;
+    const safeIndex = Math.max(0, Math.min(index, max));
+    mobileModalSwiper.slideTo(safeIndex, 0);
+    setTimeout(() => mobileModalSwiper.update(), 0);
+  }
+  function closeMobileModal() {
+    mobileModalEl.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    document.body.classList.remove("modal-open");
+  }
+
+  // Open modal
+  mobileDetailsSwiper.on("tap", () =>
+    openMobileModalAt(mobileDetailsSwiper.activeIndex)
+  );
+  document
+    .querySelectorAll(".product-card-slider-mobile .swiper-slide img")
+    .forEach((img) => {
+      img.addEventListener("click", () =>
+        openMobileModalAt(mobileDetailsSwiper.activeIndex)
+      );
+      img.setAttribute("draggable", "false");
+    });
+
+  // Close modal
+  mobileModalClose.addEventListener("click", closeMobileModal);
+  mobileModalEl.addEventListener("click", (e) => {
+    if (e.target === mobileModalEl) closeMobileModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeMobileModal();
+  });
+
+  const stop = (e) => e.stopPropagation();
+  document
+    .querySelector(".product-card-badge-mobile")
+    ?.addEventListener("click", stop);
+  document
+    .querySelector(".product-card-wishlist-mobile")
+    ?.addEventListener("click", stop);
+});
+
+// tab
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
+
+tabButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tabContents.forEach((content) => (content.style.display = "none"));
+
+    tabButtons.forEach((button) => button.classList.remove("active"));
+
+    const tabId = btn.getAttribute("data-tab");
+    document.getElementById(tabId).style.display = "block";
+
+    btn.classList.add("active");
+  });
+});
+
+if (tabButtons.length > 0) {
+  tabButtons[0].click();
+}
+
+// thumb-slider
+document.addEventListener("DOMContentLoaded", function () {
+  // --- thumbs ---
+  const galleryThumbs = new Swiper(".gallery-thumbs", {
+    direction: "vertical",
+    spaceBetween: 10,
+    slidesPerView: 3,
+    mousewheel: true,
+    loop: false,
+    watchSlidesProgress: true,
+    slideToClickedSlide: true,
+    freeMode: true,
+    observer: true,
+    observeParents: true,
+  });
+
+  // --- main ---
+  const galleryMain = new Swiper(".gallery-main", {
+    direction: "horizontal",
+    spaceBetween: 10,
+    loop: false,
+    speed: 500,
+    thumbs: { swiper: galleryThumbs },
+    observer: true,
+    observeParents: true,
+    // on: {
+    //   slideChange() {
+    //     galleryThumbs.slideTo(galleryMain.activeIndex);
+    //   },
+    // },
+    on: {
+      slideChange() {
+        const idx = galleryMain.activeIndex;
+        galleryThumbs.slideTo(idx - 1);
+      },
+    },
+  });
+
+  // modal slider
+  const modal = document.getElementById("imgModal");
+  const modalClose = document.getElementById("imgModalClose");
+
+  const modalSwiper = new Swiper(".modal-gallery", {
+    loop: false,
+    speed: 1000,
+    spaceBetween: 0,
+    slidesPerView: 1,
+    centeredSlides: true,
+    navigation: {
+      nextEl: ".modal-gallery .swiper-button-next",
+      prevEl: ".modal-gallery .swiper-button-prev",
+    },
+    pagination: {
+      el: ".modal-gallery .swiper-pagination",
+      clickable: true,
+    },
+    keyboard: { enabled: true },
+    observer: true,
+    observeParents: true,
+  });
+
+  // Build modal slides dynamically from main images
+  function rebuildPcModalFromMain() {
+    const wrapper = document.querySelector(".modal-gallery .swiper-wrapper");
+    if (!wrapper) return;
+    const imgs = document.querySelectorAll(".gallery-main .main-image");
+    wrapper.innerHTML = "";
+    imgs.forEach((img) => {
+      const src = img.getAttribute("data-full") || img.src;
+      const slide = document.createElement("div");
+      slide.className = "swiper-slide";
+      slide.innerHTML = `<img class="modal-image" src="${src}" alt="">`;
+      wrapper.appendChild(slide);
+    });
+    modalSwiper.update();
+  }
+  function openModalAt(index) {
+    rebuildPcModalFromMain();
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    modalSwiper.slideTo(index, 0);
+    // ensure layout after show
+    setTimeout(() => modalSwiper.update(), 0);
+  }
+
+  function closeModal() {
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+
+    const idx = modalSwiper.activeIndex;
+    galleryMain.slideTo(idx, 0);
+    galleryThumbs.slideTo(idx);
+  }
+
+  document.querySelectorAll(".gallery-main .main-image").forEach((img) => {
+    img.addEventListener("click", () => openModalAt(galleryMain.activeIndex));
+    img.setAttribute("draggable", "false");
+  });
+
+  modalClose.addEventListener("click", closeModal);
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeModal();
+  });
+
+  galleryThumbs.on("click", (swiper) => {
+    const idx = swiper.clickedIndex;
+    if (typeof idx === "number" && idx >= 0) {
+      galleryMain.slideTo(idx);
+    }
+  });
+  document.querySelectorAll(".gallery-thumbs .thumb-img").forEach((btn, i) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      galleryMain.slideTo(i);
+    });
+  });
+
+  const thumbSlides = document.querySelectorAll(
+    ".gallery-thumbs .swiper-slide"
+  );
+  thumbSlides.forEach((slide, i) => {
+    slide.addEventListener("mouseenter", () => galleryMain.slideTo(i, 0));
+    slide.addEventListener("focusin", () => galleryMain.slideTo(i, 0));
+  });
+
+  galleryThumbs.on("touchStart", () => galleryMain.setTransition(0));
+});
