@@ -313,7 +313,7 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: false,
     centeredSlides: true,
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 30,
     speed: 500,
     pagination: {
       el: ".product-card-pagination-mobile",
@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileModalSwiper = new Swiper(".mobile-modal-gallery", {
     loop: false,
     speed: 350,
-    spaceBetween: 15,
+    spaceBetween: 10,
     slidesPerView: 1,
     centeredSlides: true,
     navigation: {
@@ -546,28 +546,4 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeModal();
   });
-
-  galleryThumbs.on("click", (swiper) => {
-    const idx = swiper.clickedIndex;
-    if (typeof idx === "number" && idx >= 0) {
-      galleryMain.slideTo(idx);
-    }
-  });
-  document.querySelectorAll(".gallery-thumbs .thumb-img").forEach((btn, i) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      galleryMain.slideTo(i);
-    });
-  });
-
-  const thumbSlides = document.querySelectorAll(
-    ".gallery-thumbs .swiper-slide"
-  );
-  thumbSlides.forEach((slide, i) => {
-    slide.addEventListener("mouseenter", () => galleryMain.slideTo(i, 0));
-    slide.addEventListener("focusin", () => galleryMain.slideTo(i, 0));
-  });
-
-  galleryThumbs.on("touchStart", () => galleryMain.setTransition(0));
 });
