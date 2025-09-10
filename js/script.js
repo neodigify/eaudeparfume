@@ -289,21 +289,60 @@ menuItems.forEach((item) => {
 // details page slider
 
 // accordion
-const accordions = document.querySelectorAll(".accordion-item");
+// const accordions = document.querySelectorAll(".accordion-item");
 
-accordions.forEach((item) => {
-  const header = item.querySelector(".accordion-header");
+// accordions.forEach((item) => {
+//   const header = item.querySelector(".accordion-header");
 
-  header.addEventListener("click", () => {
-    // Close all other accordions
-    accordions.forEach((i) => {
-      if (i !== item) {
-        i.classList.remove("active");
-      }
+//   header.addEventListener("click", () => {
+//     // Close all other accordions
+//     accordions.forEach((i) => {
+//       if (i !== item) {
+//         i.classList.remove("active");
+//       }
+//     });
+
+//     // Toggle current accordion
+//     item.classList.toggle("active");
+//   });
+// });
+jQuery(function ($) {
+  // 1) Wrap content once so we can measure inner height cleanly
+  $(".product-accordion .accordion-content").each(function () {
+    if (!$(this).children(".accordion-content-inner").length) {
+      $(this).wrapInner('<div class="accordion-content-inner"></div>');
+    }
+  });
+
+  // 2) Toggle logic, animating HEIGHT of the container to the inner’s height
+  $(".product-accordion .accordion-header").on("click", function () {
+    const $item = $(this).closest(".accordion-item");
+    const $content = $item.find(".accordion-content");
+    const $inner = $content.children(".accordion-content-inner");
+
+    // close others (classic accordion)
+    $item.siblings(".is-open").each(function () {
+      const $c = $(this).find(".accordion-content");
+      $c.stop().animate({ height: 0 }, 300);
+      $(this).removeClass("is-open");
     });
 
-    // Toggle current accordion
-    item.classList.toggle("active");
+    if ($item.hasClass("is-open")) {
+      // close current
+      $content.stop().animate({ height: 0 }, 300);
+      $item.removeClass("is-open");
+    } else {
+      // open current to exact inner height (includes text, but not margins)
+      const target = $inner.outerHeight(true); // true includes inner margins
+      $content
+        .stop()
+        .css({ height: 0 })
+        .animate({ height: target }, 300, function () {
+          // allow natural growth after opening (images, responsive text)
+          $content.css({ height: "auto" });
+        });
+      $item.addClass("is-open");
+    }
   });
 });
 
