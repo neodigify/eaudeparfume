@@ -289,7 +289,7 @@ menuItems.forEach((item) => {
 // details page slider
 
 // accordion
-const accordions = document.querySelectorAll(".mobile .accordion-item");
+const accordions = document.querySelectorAll(".accordion-item");
 
 accordions.forEach((item) => {
   const header = item.querySelector(".accordion-header");
