@@ -41,15 +41,16 @@
 
 
 @media screen and (min-width:991px) {
-    
+
     .header-wrapper:before {
-    content: "";
-    position: absolute;
-    width: 300%;
-    height: 1px;
-    background: #d2cfca;
-    bottom: -25px;
-}
+        content: "";
+        position: absolute;
+        width: 300%;
+        height: 1px;
+        background: #d2cfca;
+        bottom: -25px;
+    }
+
     .fixed-w-645 {
         width: 160px !important;
     }
@@ -116,16 +117,13 @@
         padding-top: 20px;
     }
 
-    .search-wrapper.desktop {
-        display: none;
-    }
 
     .hamburger-menu {
         width: 30px;
         /* padding-right: 20px; */
     }
 
-    .search-wrapper.mobile {
+    .search-wrapper.desktop-hide {
         display: flex;
         width: 100%;
     }
@@ -170,20 +168,15 @@
     /* .nav-menu-container.active {
         display: flex;
     } */
-    .hamburger-menu,
+
     .mobile-logo,
-    .product-card-mobile-wrapper.mobile.hide,
-    .product-accordion.mobile.hide {
+    .desktop-hide {
         display: block;
     }
 
-    .gallery-container.desktop.hide,
-    .product-tabs.desktop.hide,
-    .wishlist-button.desktop.hide,
-    .img-modal {
+    .mobile-hide {
         display: none;
     }
-
 
     /* category */
 
@@ -502,9 +495,7 @@
         left: 0px;
     }
 
-    .desktop-hide {
-        display: block;
-    }
+
 
     .footer-1st-column.footer-2nd-row,
     .footer-2nd-column.footer-2nd-row,

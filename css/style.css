@@ -364,9 +364,6 @@ h3 {
   gap: 30px;
 }
 
-.search-wrapper.mobile {
-  display: none;
-}
 
 
 .logo {
@@ -450,7 +447,6 @@ h3 {
 }
 
 .hamburger-menu {
-  display: none;
   overflow: visible;
 
 }
@@ -604,9 +600,6 @@ h3 {
 
 /* mobile-hero */
 
-.mobile-hero-wrapper {
-  display: none;
-}
 
 
 /* best-seller */
@@ -1573,9 +1566,7 @@ ol {
   line-height: 1.4em;
 }
 
-.mobile-hero-wrapper {
-  display: none;
-}
+
 
 
 .utility-page-wrap {
@@ -2018,12 +2009,6 @@ ol {
 .product-info-heading {
   padding: 40px 0px 30px;
 
-}
-
-.product-accordion.mobile.hide,
-.product-card-mobile-wrapper.mobile.hide,
-.mobile-img-modal {
-  display: none;
 }
 
 
