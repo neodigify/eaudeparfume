@@ -34,10 +34,10 @@ const mobileSwiper = new Swiper(".mobile-hero-swiper", {
     767: { slidesPerView: 1.8, spaceBetween: 20 },
     800: { slidesPerView: 2, spaceBetween: 20 },
   },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
 });
 
 //category
@@ -586,3 +586,135 @@ document.addEventListener("DOMContentLoaded", function () {
     if (e.key === "Escape") closeModal();
   });
 });
+
+//search
+(function () {
+  // Inject dialog markup
+  const dialogHTML = `
+    <dialog class="search-dialog">
+      <div class="dialog-panel">
+        <div class="dialog-header">
+          <div class="dialog-input">
+            <input class="pp-14px-400 text-282929 search-input-text dialog-input-field" type="search" placeholder="Søg produkter og artikler" autocomplete="off" />
+            <button class="clear-text-btn pp-12px-400 text-282929" type="button" aria-label="Ryd">Ryd</button>
+            <img src="images/search-interface-symbol-4.svg" alt="search" class="search-img" />
+          </div>
+          <button class="close-btn dialog-close">&times;</button>
+        </div>
+        <div class="dialog-results">
+          <div class="results-title pp-12px-500-mh-c text-282929">Populære søgninger</div>
+          <div class="loading">    <img src="images/bouncing-circles (1)" alt="search" class="loading-spinner" /></div>
+          <ul class="list pp-14px-400 text-282929"></ul>
+        </div>
+      </div>
+    </dialog>
+  `;
+  document.body.insertAdjacentHTML("beforeend", dialogHTML);
+
+  // Select elements
+  const triggers = document.querySelectorAll(".trigger-bar"); // multiple (PC + mobile)
+  const triggerInputs = document.querySelectorAll(".trigger-input");
+  const dialog = document.querySelector(".search-dialog");
+  const dialogInput = dialog.querySelector(".dialog-input-field");
+  const dialogClose = dialog.querySelector(".dialog-close");
+  const loading = dialog.querySelector(".loading");
+  const resultsList = dialog.querySelector(".list");
+  const clearTextBtn = dialog.querySelector(".clear-text-btn");
+
+  const data = [
+    "e.l.f.",
+    "matas striber",
+    "solcreme",
+    "the ordinary",
+    "la roche-posay",
+    "cerave",
+    "nilens jord",
+    "kérastase",
+  ];
+
+  let firstOpen = true;
+
+  function renderList(items) {
+    resultsList.innerHTML = "";
+    if (!items.length) {
+      resultsList.innerHTML = '<li class="no-results">Ingen resultater</li>';
+      return;
+    }
+    items.forEach((txt) => {
+      const li = document.createElement("li");
+      li.className = "item";
+      li.innerHTML = `<span>${txt}</span><span class="arrow">↗</span>`;
+      li.addEventListener("click", () => {
+        dialogInput.value = txt;
+        window.location.href = "/search?q=" + encodeURIComponent(txt);
+      });
+      resultsList.appendChild(li);
+    });
+  }
+
+  function toggleClearButton() {
+    clearTextBtn.style.display = dialogInput.value.trim()
+      ? "inline-block"
+      : "none";
+  }
+
+  function openDialog() {
+    dialog.showModal();
+    dialogInput.focus();
+    if (firstOpen) {
+      loading.style.display = "block";
+      resultsList.innerHTML = "";
+      setTimeout(() => {
+        loading.style.display = "none";
+        renderList(data);
+        firstOpen = false;
+        toggleClearButton();
+      }, 800);
+    } else {
+      renderList(data);
+      toggleClearButton();
+    }
+  }
+
+  function closeDialog() {
+    dialog.close();
+    triggerInputs.forEach((input) => (input.value = "")); // reset all search triggers
+    dialogInput.value = "";
+    const resultsTitle = dialog.querySelector(".results-title");
+    resultsTitle.style.display = "block";
+    renderList(data);
+    toggleClearButton();
+  }
+
+  // Bind triggers (PC + mobile)
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", openDialog);
+  });
+
+  dialogClose.addEventListener("click", closeDialog);
+  dialog.addEventListener("click", (e) => {
+    if (e.target === dialog) closeDialog();
+  });
+  dialog.addEventListener("cancel", (e) => {
+    e.preventDefault();
+    closeDialog();
+  });
+
+  dialogInput.addEventListener("input", () => {
+    const q = dialogInput.value.trim().toLowerCase();
+    const filtered = data.filter((d) => d.toLowerCase().includes(q));
+
+    const resultsTitle = dialog.querySelector(".results-title");
+    resultsTitle.style.display = q ? "none" : "block";
+
+    renderList(filtered);
+    toggleClearButton();
+  });
+
+  clearTextBtn.addEventListener("click", () => {
+    dialogInput.value = "";
+    toggleClearButton();
+    renderList(data);
+    dialogInput.focus();
+  });
+})();

@@ -61,11 +61,11 @@
 
 
         <div class="menu-right">
-          <div class="search-wrapper mobile-hide">
+          <div class="search-wrapper trigger-bar mobile-hide">
             <div>
               <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt="" class="search-img" />
             </div>
-            <input class="search-text" type="search" id="mySearch" name="q" placeholder="Søg" />
+            <input class="search-text trigger-input" placeholder="Søg" readonly />
           </div>
           <div class="icon-wrapper pp-10px-600">
             <div class="wishlist-icon-container menu-icon">
@@ -79,9 +79,11 @@
 
           </div>
         </div>
-        <div class="search-wrapper desktop-hide">
-          <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt="" class="search-img" />
-          <input class="search-text" type="search" id="mySearch" name="q" placeholder="Søg" />
+        <div class="search-wrapper trigger-bar desktop-hide">
+          <div>
+            <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt="" class="search-img" />
+          </div>
+          <input class="search-text trigger-input" placeholder="Søg" readonly />
         </div>
       </div>
     </section>
@@ -119,7 +121,7 @@
     </section>
 
     <!-- category -->
-    <section class="category-section-wrapper sp-bottom-40 sp-top-40">
+    <section class="category-section-wrapper sp-bottom-40 sp-top-40 m-gap-header">
       <div class="category-section">
         <!-- swiper container -->
         <div class="swiper categorySwiper">

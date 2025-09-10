@@ -82,22 +82,25 @@
 }
 
 @media screen and (max-width: 991px) {
+    .m-gap-header {
+        padding-top: 25px !important;
+    }
 
     /* Default padding */
     .sp-top-40 {
-        padding-top: 30px !important;
+        padding-top: 30px;
     }
 
     .sp-bottom-40 {
-        padding-bottom: 30px !important;
+        padding-bottom: 30px;
     }
 
     .sp-top-80 {
-        padding-top: 60px !important;
+        padding-top: 60px;
     }
 
     .sp-bottom-80 {
-        padding-bottom: 60px !important;
+        padding-bottom: 60px;
     }
 
     .review-swiper {
@@ -874,19 +877,19 @@
 
     /* Default Padding */
     .sp-top-40 {
-        padding-top: 25px !important;
+        padding-top: 25px;
     }
 
     .sp-bottom-40 {
-        padding-bottom: 25px !important;
+        padding-bottom: 25px;
     }
 
     .sp-top-80 {
-        padding-top: 50px !important;
+        padding-top: 50px;
     }
 
     .sp-bottom-80 {
-        padding-bottom: 50px !important;
+        padding-bottom: 50px;
     }
 
     .review-swiper {
@@ -920,7 +923,7 @@
     }
 
     .mobile-hero {
-        height: 500px;
+        height: 400px;
     }
 
     .background-img-wrapper {
@@ -1161,6 +1164,11 @@
 }
 
 @media screen and (max-width: 479px) {
+    dialog[open] {
+
+        width: 96%;
+    }
+
     img.discount-circle.discount-circle-mobile {
         inset: 100px auto auto calc(100% - 130px);
     }
@@ -1171,7 +1179,7 @@
     } */
 
     .mobile-hero {
-        height: 400px;
+        height: 330px;
     }
 
     .mobile-hero-content {
