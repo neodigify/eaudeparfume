@@ -799,7 +799,6 @@
     .accordion-header::after {
         content: "+";
         position: absolute;
-        font-size: 20px;
         right: 0;
         transition: transform 0.3s ease;
     }
