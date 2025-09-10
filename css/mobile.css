@@ -601,7 +601,6 @@
     }
 
     .mobile-product-img {
-
         border-radius: 4px;
         border: 0.15px solid #a6a5a7;
         width: 100%;
@@ -631,8 +630,8 @@
         left: 10px;
         background-color: #aa5291;
         border-radius: 50%;
-        width: 45px;
-        height: 47px;
+        width: 55px;
+        height: 57px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -648,7 +647,7 @@
     }
 
     .product-card-wishlist-icon-mobile {
-        width: 20px;
+        width: 25px;
     }
 
     .product-card-pagination-mobile .swiper-pagination-bullet-active {
