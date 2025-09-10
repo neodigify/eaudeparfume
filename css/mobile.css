@@ -82,25 +82,25 @@
 }
 
 @media screen and (max-width: 991px) {
-    .m-gap-header {
+    #m-gap-header {
         padding-top: 25px !important;
     }
 
     /* Default padding */
     .sp-top-40 {
-        padding-top: 30px;
+        padding-top: 30px !important;
     }
 
     .sp-bottom-40 {
-        padding-bottom: 30px;
+        padding-bottom: 30px !important;
     }
 
     .sp-top-80 {
-        padding-top: 60px;
+        padding-top: 60px !important;
     }
 
     .sp-bottom-80 {
-        padding-bottom: 60px;
+        padding-bottom: 60px !important;
     }
 
     .review-swiper {
@@ -877,19 +877,19 @@
 
     /* Default Padding */
     .sp-top-40 {
-        padding-top: 25px;
+        padding-top: 25px !important;
     }
 
     .sp-bottom-40 {
-        padding-bottom: 25px;
+        padding-bottom: 25px !important;
     }
 
     .sp-top-80 {
-        padding-top: 50px;
+        padding-top: 50px !important;
     }
 
     .sp-bottom-80 {
-        padding-bottom: 50px;
+        padding-bottom: 50px !important;
     }
 
     .review-swiper {

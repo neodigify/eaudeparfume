@@ -23,19 +23,19 @@ html {
 }
 
 .sp-top-40 {
-  padding-top: 40px;
+  padding-top: 40px !important;
 }
 
 .sp-bottom-40 {
-  padding-bottom: 40px;
+  padding-bottom: 40px !important;
 }
 
 .sp-top-80 {
-  padding-top: 80px;
+  padding-top: 80px !important;
 }
 
 .sp-bottom-80 {
-  padding-bottom: 80px;
+  padding-bottom: 80px !important;
 }
 
 a:-webkit-any-link {
