@@ -1465,7 +1465,8 @@ ol {
 
 }
 
-.desktop-hide {
+.desktop-hide,
+.details-desktop-hide {
   display: none;
 }
 
