@@ -1312,11 +1312,3 @@
 
 
 }
-
-@media screen and (max-width: 400px) {
-    .product-card-badge-mobile {
-
-        width: 35px;
-        height: 37px;
-    }
-}
