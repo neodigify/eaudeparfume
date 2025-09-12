@@ -1172,6 +1172,21 @@
     .new-price {
         padding-top: 0px;
     }
+
+    .product-variants {
+
+        padding: 20px 0px;
+    }
+
+    .facility {
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+    }
+
+    .product-accordion {
+        padding-top: 0px;
+    }
 }
 
 @media screen and (max-width: 544px) {
