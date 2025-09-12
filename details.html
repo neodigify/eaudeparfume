@@ -59,15 +59,25 @@
                         <img src="images/logo.png" loading="lazy" alt="" class="logo" /></a>
                 </div>
 
-
                 <div class="menu-right">
                     <div class="search-wrapper trigger-bar mobile-hide">
                         <div>
-                            <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt=""
-                                class="search-img" />
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612.01 612.01" width="20" height="20"
+                                class="search-img">
+                                <g>
+                                    <path d="M606.209 578.714 448.198 423.228C489.576 378.272 515 318.817 515 253.393
+                                   514.98 113.439 399.704 0 257.493 0S.006 113.439.006 253.393s115.276 253.393
+                                   257.487 253.393c61.445 0 117.801-21.253 162.068-56.586l158.624 156.099
+                                   c7.729 7.614 20.277 7.614 28.006 0a19.291 19.291 0 0 0 .018-27.585zM257.493 467.8
+                                   c-120.326 0-217.869-95.993-217.869-214.407S137.167 38.986 257.493 38.986
+                                   c120.327 0 217.869 95.993 217.869 214.407S377.82 467.8 257.493 467.8z"
+                                        fill="#353535" />
+                                </g>
+                            </svg>
                         </div>
                         <input class="search-text trigger-input" placeholder="Søg" readonly />
                     </div>
+
                     <div class="icon-wrapper pp-10px-600">
                         <div class="wishlist-icon-container menu-icon">
                             <img src="images/heart-6.svg" loading="lazy" width="30" alt="" class="wishlist-icon" />
@@ -82,11 +92,67 @@
                 </div>
                 <div class="search-wrapper trigger-bar desktop-hide">
                     <div>
-                        <img src="images/search-interface-symbol-4.svg" loading="lazy" width="190" alt=""
-                            class="search-img" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612.01 612.01" width="20" height="20"
+                            class="search-img">
+                            <g>
+                                <path d="M606.209 578.714 448.198 423.228C489.576 378.272 515 318.817 515 253.393
+                             514.98 113.439 399.704 0 257.493 0S.006 113.439.006 253.393s115.276 253.393
+                             257.487 253.393c61.445 0 117.801-21.253 162.068-56.586l158.624 156.099
+                             c7.729 7.614 20.277 7.614 28.006 0a19.291 19.291 0 0 0 .018-27.585zM257.493 467.8
+                             c-120.326 0-217.869-95.993-217.869-214.407S137.167 38.986 257.493 38.986
+                             c120.327 0 217.869 95.993 217.869 214.407S377.82 467.8 257.493 467.8z" fill="#353535" />
+                            </g>
+                        </svg>
                     </div>
                     <input class="search-text trigger-input" placeholder="Søg" readonly />
                 </div>
+                <dialog class="search-dialog">
+                    <div class="dialog-panel">
+                        <div class="dialog-header">
+                            <div class="dialog-input">
+                                <input class="pp-14px-400 text-282929 search-input-text dialog-input-field"
+                                    type="search" placeholder="Søg produkter og artikler" autocomplete="off" />
+                                <button class="clear-text-btn pp-12px-400 text-282929" type="button"
+                                    aria-label="Ryd">Ryd</button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612.01 612.01" width="20"
+                                    height="20" class="search-img">
+                                    <g>
+                                        <path d="M606.209 578.714 448.198 423.228C489.576 378.272 515 318.817 515 253.393
+                                       514.98 113.439 399.704 0 257.493 0S.006 113.439.006 253.393s115.276 253.393
+                                       257.487 253.393c61.445 0 117.801-21.253 162.068-56.586l158.624 156.099
+                                       c7.729 7.614 20.277 7.614 28.006 0a19.291 19.291 0 0 0 .018-27.585zM257.493 467.8
+                                       c-120.326 0-217.869-95.993-217.869-214.407S137.167 38.986 257.493 38.986
+                                       c120.327 0 217.869 95.993 217.869 214.407S377.82 467.8 257.493 467.8z"
+                                            fill="#353535" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <button class="close-btn dialog-close">&times;</button>
+                        </div>
+                        <div class="dialog-results">
+                            <div class="results-title pp-12px-500-mh-c text-282929">Populære søgninger</div>
+                            <div class="loading">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="loading-spinner"
+                                    width="60" height="60">
+                                    <circle fill="#282929" stroke="#282929" stroke-width="5" r="15" cx="40" cy="65">
+                                        <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;"
+                                            keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.4" />
+                                    </circle>
+                                    <circle fill="#282929" stroke="#282929" stroke-width="5" r="15" cx="100" cy="65">
+                                        <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;"
+                                            keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="-.2" />
+                                    </circle>
+                                    <circle fill="#282929" stroke="#282929" stroke-width="5" r="15" cx="160" cy="65">
+                                        <animate attributeName="cy" calcMode="spline" dur="2" values="65;135;65;"
+                                            keySplines=".5 0 .5 1;.5 0 .5 1" repeatCount="indefinite" begin="0" />
+                                    </circle>
+                                </svg>
+                            </div>
+                            <ul class="list pp-14px-400 text-282929"></ul>
+                        </div>
+                    </div>
+                </dialog>
+
             </div>
         </section>
 
@@ -201,55 +267,43 @@
                         </div>
                     </div> -->
                     <div class="product-card-mobile-wrapper desktop-hide">
-
                         <div class="product-card-mobile">
+                            <!-- Fixed Badge and Wishlist -->
+                            <div class="product-card-badge-mobile">
+                                <p class="product-card-badge-text-mobile cg-20px-600 text-white">25%</p>
+                            </div>
+                            <a href="#">
+                                <div class="product-card-wishlist-mobile">
+                                    <img src="https://cdn.prod.website-files.com/68a874dc38b7ca10c9dcac3f/68a8a8e9367d322e20740eed_heart%20(6).svg"
+                                        alt="wishlist" class="product-card-wishlist-icon-mobile" />
+                                </div>
+                            </a>
+
                             <!-- Image Slider -->
                             <div class="product-card-slider-mobile swiper">
                                 <div class="swiper-wrapper">
                                     <!-- Slide 1 -->
                                     <div class="swiper-slide">
-                                        <!-- Discount Badge -->
-                                        <div class="product-card-badge-mobile">
-                                            <p class="product-card-badge-text-mobile cg-20px-600 text-white">25%</p>
+                                        <div class="gallery-img-mobile">
+                                            <img class="mobile-product-img"
+                                                src="images/image 2025-09-10 at 03.03.58_276eb90d.jpg"
+                                                alt="product 1" />
                                         </div>
-                                        <!-- Wishlist -->
-                                        <a href="#">
-                                            <div class="product-card-wishlist-mobile">
-                                                <img src="https://cdn.prod.website-files.com/68a874dc38b7ca10c9dcac3f/68a8a8e9367d322e20740eed_heart%20(6).svg"
-                                                    alt="wishlist" class="product-card-wishlist-icon-mobile" />
-                                            </div>
-                                        </a>
-                                        <!-- Image -->
-                                        <img class="mobile-product-img"
-                                            src="images/image 2025-09-10 at 03.03.58_276eb90d.jpg" alt="product 1" />
                                     </div>
 
                                     <!-- Slide 2 -->
                                     <div class="swiper-slide">
-                                        <div class="product-card-badge-mobile">
-                                            <p class="product-card-badge-text-mobile cg-20px-600 text-white">25%</p>
+                                        <div class="gallery-img-mobile">
+                                            <img class="mobile-product-img" src="images/w1536.webp" alt="product 2" />
                                         </div>
-                                        <a href="#">
-                                            <div class="product-card-wishlist-mobile">
-                                                <img src="https://cdn.prod.website-files.com/68a874dc38b7ca10c9dcac3f/68a8a8e9367d322e20740eed_heart%20(6).svg"
-                                                    alt="wishlist" class="product-card-wishlist-icon-mobile" />
-                                            </div>
-                                        </a>
-                                        <img class="mobile-product-img" src="images/w1536.webp" alt="product 2" />
                                     </div>
 
                                     <!-- Slide 3 -->
                                     <div class="swiper-slide">
-                                        <div class="product-card-badge-mobile">
-                                            <p class="product-card-badge-text-mobile cg-20px-600 text-white">25%</p>
+                                        <div class="gallery-img-mobile">
+                                            <img class="mobile-product-img" src="images/w1536 (1).webp"
+                                                alt="product 3" />
                                         </div>
-                                        <a href="#">
-                                            <div class="product-card-wishlist-mobile">
-                                                <img src="https://cdn.prod.website-files.com/68a874dc38b7ca10c9dcac3f/68a8a8e9367d322e20740eed_heart%20(6).svg"
-                                                    alt="wishlist" class="product-card-wishlist-icon-mobile" />
-                                            </div>
-                                        </a>
-                                        <img class="mobile-product-img" src="images/w1536 (1).webp" alt="product 3" />
                                     </div>
                                 </div>
 
@@ -257,9 +311,8 @@
                                 <div class="product-card-pagination-mobile"></div>
                             </div>
                         </div>
-
-
                     </div>
+
 
                     <!-- New: Mobile Image Modal -->
                     <!-- <div class="mobile-img-modal desktop-hide" id="mobileImgModal" aria-hidden="true">
@@ -290,11 +343,12 @@
                             695,95 DKK
                         </p>
                     </div>
-                    <p class="pp-14px-400 text-282929 product-description">Chloé introducerer Chloé L’Eau de Parfum
+                    <p class="pp-14px-400 text-282929 product-description mobile-hide">Chloé introducerer Chloé L’Eau de
+                        Parfum
                         Lumineuse for
                         Women, en feminin blomsterduft bygget op omkring en lysende rose syet sammen med vanilje.
                     </p>
-                    <p class="pp-14px-500">Vælg variant</p>
+                    <p class="pp-14px-500 p-m">Vælg variant</p>
                     <div class="product-variants">
                         <a href="#">
                             <div class="product-variant">
@@ -440,18 +494,30 @@
                 <div id="SPØRG OS" class="tab-content" style="display:none">
                     <div class="product-info-tab">
 
-                        <h5 class="product-info-heading pp-12px-500-mh-c text-282929">INGREDIENSER</h5>
-                        <p class="pp-14px-400 text-282929">Duften til den kreative og individualistiske kvinde.
-                            Den
-                            lette,
-                            flirtende topnote af blomsternes
-                            indre, svæver bort for
-                            at afsløre rosens rigere og mere sensuelle side. Rosen ledsages af magnolia og
-                            liljekonval
-                            samt af en
-                            diskret antydning
-                            af varm amber og
-                            elegant cedertræ.</p>
+                        <div class="question-show">
+                            <div class="qs-form-wrapper-div">
+                                <p class="form-upper-text pp-13px-500">
+                                    Har du spørgsmål til denne vare?
+                                </p>
+                            </div>
+
+                            <div class="question-form">
+                                <input class="question-name pp-14px-400 text-282929" placeholder="Skriv dit navn"
+                                    name="name" data-name="name" type="text" value="">
+                                <input class="question-email pp-14px-400 text-282929" placeholder="Skriv din e-mail"
+                                    type="email" value="">
+                                <textarea class="question-text pp-14px-400 text-282929"
+                                    placeholder="Skriv dit spørgsmål"></textarea>
+
+                                <div class="question-note pp-14px-400 text-282929">
+                                    Vi svarer så hurtigt vi kan. På alle hverdage kan du forvente svar indenfor 24
+                                    timer.
+                                </div>
+
+                                <input class="question-send-btn button-text-13px" type="button" value="Send">
+                            </div>
+                        </div>
+
 
 
                     </div>
@@ -459,22 +525,6 @@
             </div>
 
             <div class="product-accordion desktop-hide" id="product-accordion">
-                <div class="accordion-item">
-                    <h5 class="accordion-header pp-12px-500-mh-c text-282929">BETALING</h5>
-                    <div class="accordion-content pp-14px-400 text-282929">
-                        <p>Duften til den kreative og individualistiske kvinde. Den lette, flirtende topnote af
-                            blomsternes
-                            indre,
-                            svæver bort for
-                            at afsløre rosens rigere og mere sensuelle side. Rosen ledsages af magnolia og
-                            liljekonval samt
-                            af en
-                            diskret antydning
-                            af varm amber og
-                            elegant cedertræ.
-                        </p>
-                    </div>
-                </div>
                 <div class="accordion-item">
                     <h5 class="accordion-header pp-12px-500-mh-c text-282929">BESKRIVELSE</h5>
 
@@ -492,20 +542,7 @@
                     </div>
                 </div>
 
-                <div class="accordion-item">
-                    <h5 class="accordion-header pp-12px-500-mh-c text-282929">INGREDIENSER</h5>
-                    <div class="accordion-content pp-14px-400 text-282929">
-                        <p>Duften til den kreative og individualistiske kvinde. Den lette, flirtende topnote af
-                            blomsternes
-                            indre,
-                            svæver bort for
-                            at afsløre rosens rigere og mere sensuelle side. Rosen ledsages af magnolia og
-                            liljekonval samt
-                            af en
-                            diskret antydning
-                            af varm amber og elegant cedertræ.</p>
-                    </div>
-                </div>
+
 
 
                 <div class="accordion-item">
@@ -524,9 +561,8 @@
                     </div>
                 </div>
 
-
                 <div class="accordion-item">
-                    <h5 class="accordion-header pp-12px-500-mh-c text-282929 ">SPØRG OS</h5>
+                    <h5 class="accordion-header pp-12px-500-mh-c text-282929">BETALING</h5>
                     <div class="accordion-content pp-14px-400 text-282929">
                         <p>Duften til den kreative og individualistiske kvinde. Den lette, flirtende topnote af
                             blomsternes
@@ -536,7 +572,38 @@
                             liljekonval samt
                             af en
                             diskret antydning
-                            af varm amber og elegant cedertræ.</p>
+                            af varm amber og
+                            elegant cedertræ.
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h5 class="accordion-header pp-12px-500-mh-c text-282929 ">SPØRG OS</h5>
+                    <div class="accordion-content pp-14px-400 text-282929">
+                        <div class="question-show">
+                            <div class="qs-form-wrapper-div">
+                                <p class="form-upper-text pp-13px-500">
+                                    Har du spørgsmål til denne vare?
+                                </p>
+                            </div>
+
+                            <div class="question-form">
+                                <input class="question-name pp-14px-400 text-282929" placeholder="Skriv dit navn"
+                                    name="name" data-name="name" type="text" value="">
+                                <input class="question-email pp-14px-400 text-282929" placeholder="Skriv din e-mail"
+                                    type="email" value="">
+                                <textarea class="question-text pp-14px-400 text-282929"
+                                    placeholder="Skriv dit spørgsmål"></textarea>
+
+                                <div class="question-note pp-14px-400 text-282929">
+                                    Vi svarer så hurtigt vi kan. På alle hverdage kan du forvente svar indenfor 24
+                                    timer.
+                                </div>
+
+                                <input class="question-send-btn button-text-13px" type="button" value="Send">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
