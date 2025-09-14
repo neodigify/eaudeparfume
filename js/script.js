@@ -614,3 +614,196 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+//category-page
+
+const categoryPageSwiper = new Swiper(".categoryPageSwiper", {
+  loop: false,
+  spaceBetween: 5,
+  grabCursor: true,
+  slidesPerView: 3.3,
+  breakpoints: {
+    545: { slidesPerView: 4.3, spaceBetween: 5 },
+    768: { slidesPerView: 6.3, spaceBetween: 5 },
+    850: { slidesPerView: 6.5, spaceBetween: 20 },
+    1000: { slidesPerView: 6.8, spaceBetween: 20 },
+    1100: { slidesPerView: 7, spaceBetween: 20 },
+    1300: { slidesPerView: 8, spaceBetween: 20 },
+  },
+});
+
+const filterSwiper = new Swiper(".filter-swiper", {
+  loop: false,
+  slidesPerView: "auto",
+  spaceBetween: 10,
+});
+
+// mobile-pagination-category-product
+document.addEventListener("DOMContentLoaded", () => {
+  function isResponsive() {
+    return window.innerWidth < 992;
+  }
+
+  if (!isResponsive()) return;
+  const grid = document.querySelector(".category-product-grid");
+  const products = Array.from(grid.querySelectorAll(".category-product-card"));
+  const prevBtn = document.querySelector(".prev");
+  const nextBtn = document.querySelector(".next");
+  const paginationContainer = document.querySelector(
+    ".category-product-pagination-mobile"
+  );
+  const perPageLinks = document.querySelectorAll(".per-page-choices a");
+
+  const statusText = document.createElement("p");
+  statusText.className = "mobile-page-status pp-12px-500 text-282929";
+  paginationContainer.insertBefore(
+    statusText,
+    paginationContainer.querySelector(".category-product-button-div")
+  );
+
+  let currentPage = 1;
+  let perPage = 8;
+  const totalProducts = products.length;
+  let totalPages = Math.ceil(totalProducts / perPage);
+
+  function renderProducts() {
+    products.forEach((p, i) => {
+      const start = (currentPage - 1) * perPage;
+      const end = currentPage * perPage;
+      p.style.display = i >= start && i < end ? "block" : "none";
+    });
+
+    const startNum = (currentPage - 1) * perPage + 1;
+    const endNum = Math.min(currentPage * perPage, totalProducts);
+    statusText.textContent = `${startNum}–${endNum}`;
+
+    prevBtn.classList.toggle("disabled", currentPage === 1);
+    nextBtn.classList.toggle("disabled", currentPage === totalPages);
+  }
+
+  prevBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentPage > 1) {
+      currentPage--;
+      renderProducts();
+    }
+  });
+
+  nextBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderProducts();
+    }
+  });
+
+  // Change per-page
+  perPageLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      perPage = parseInt(link.dataset.count, 10);
+      totalPages = Math.ceil(totalProducts / perPage);
+      currentPage = 1;
+
+      perPageLinks.forEach((l) => l.classList.remove("active"));
+      link.classList.add("active");
+
+      renderProducts();
+    });
+  });
+
+  // Set default active (8 products)
+  perPageLinks.forEach((l) => {
+    if (l.dataset.count === "8") {
+      l.classList.add("active");
+    }
+  });
+
+  renderProducts();
+});
+
+// see-more-product-desktop
+document.addEventListener("DOMContentLoaded", () => {
+  function isDesktop() {
+    return window.innerWidth >= 992;
+  }
+
+  if (!isDesktop()) return;
+
+  const desktopGrid = document.querySelector(".category-product-grid");
+  const products = Array.from(
+    desktopGrid.querySelectorAll(".category-product-card")
+  );
+  const seeMoreBtn = document.getElementById("seeMoreBtn");
+
+  const rowsPerClick = 2;
+  let visibleCount = 0;
+  let isExpanded = false;
+
+  function getColumnCount() {
+    const gridStyle = getComputedStyle(desktopGrid);
+    return gridStyle.gridTemplateColumns.split(" ").length;
+  }
+
+  function renderProducts() {
+    products.forEach((p, i) => {
+      p.style.display = i < visibleCount ? "grid" : "none";
+    });
+    seeMoreBtn.textContent = isExpanded ? "Se mindre" : "Se flere";
+  }
+
+  function showInitialRows() {
+    const cols = getColumnCount();
+    visibleCount = Math.min(cols * rowsPerClick, products.length);
+    renderProducts();
+  }
+
+  seeMoreBtn.addEventListener("click", () => {
+    const cols = getColumnCount();
+    const maxVisible = products.length;
+    if (!isExpanded) {
+      // Expand → show all products
+      visibleCount = maxVisible;
+      isExpanded = true;
+    } else {
+      // Collapse → show only first 2 rows
+      visibleCount = Math.min(cols * rowsPerClick, products.length);
+      isExpanded = false;
+    }
+    renderProducts();
+  });
+  showInitialRows();
+
+  // Adjust on resize
+  window.addEventListener("resize", () => {
+    const cols = getColumnCount();
+    if (!isExpanded) {
+      visibleCount = Math.min(cols * rowsPerClick, products.length);
+    }
+    renderProducts();
+  });
+});
+
+// sort
+
+const openBtns = document.querySelectorAll(".open-drawer-btn");
+const closeBtns = document.querySelectorAll(".close-btn");
+const backBtns = document.querySelectorAll(".back-btn");
+const applyBtn = document.querySelectorAll(".apply-btn");
+const clearBtn = document.querySelectorAll(".clearBtn");
+const overlay = document.querySelector(".overlay");
+const drawer = document.querySelector(".drawer");
+
+openBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    overlay.classList.add("active");
+    drawer.classList.add("active");
+  });
+});
+
+[...closeBtns, ...backBtns, overlay].forEach((el) => {
+  el.addEventListener("click", () => {
+    overlay.classList.remove("active");
+    drawer.classList.remove("active");
+  });
+});
