@@ -49,6 +49,7 @@
 
 
 
+
 @media screen and (min-width:991px) {
 
     .header-wrapper:before {
@@ -132,7 +133,144 @@
 
     .hamburger-menu {
         width: 30px;
+        cursor: pointer;
         /* padding-right: 20px; */
+    }
+
+    /* Overlay */
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.35);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .25s ease;
+        z-index: 999;
+    }
+
+
+    .menu-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Drawer */
+    .menu-drawer {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        max-width: 480px;
+        min-height: 100%;
+        background: #eae9e7;
+        display: flex;
+        flex-direction: column;
+        transition: all .5s ease;
+        will-change: transform;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 6px 6px;
+        z-index: 1000;
+    }
+
+    .menu-drawer.active {
+        left: 0;
+    }
+
+    /* Drawer header */
+    .menu-drawer-header {
+        position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 16px;
+        position: relative;
+        gap: 24px;
+
+    }
+
+    /* Close button */
+    .close-menu-btn {
+        font-size: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+    }
+
+    /* Show close button when drawer is active */
+    .menu-drawer.active .close-menu-btn {
+        display: block;
+    }
+
+    .drawer-content-menu {
+        padding: 16px;
+        overflow-y: auto;
+        flex: 1 1 auto;
+    }
+
+    /* Drawer content */
+    .drawer-content-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: white;
+        padding: 0px 16px;
+        border-radius: 4px;
+
+    }
+
+    .drawer-content-menu li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border-bottom: 1px solid #d2cfca;
+    }
+
+    .drawer-content-menu li:last-child {
+
+        border-bottom: none;
+    }
+
+    .drawer-content-menu li a {
+        text-decoration: none;
+        color: inherit;
+        flex: 1;
+        padding: 10px 0;
+    }
+
+    .drawer-content-menu li a:hover {
+        text-decoration: none;
+        color: #aa5291;
+    }
+
+    .arrow-btn {
+
+        border: none;
+        background: transparent;
+
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .menu-arrow {
+        rotate: 270deg;
+        width: 25px;
+        height: 25px;
+        color: #282929;
+    }
+
+    .logo-drawer {
+        width: 100%;
+        height: auto;
+    }
+
+    .main-logo-link-wrapper-drawer {
+        max-width: 200px;
     }
 
     .search-wrapper.desktop-hide {
@@ -166,9 +304,6 @@
         display: block !important;
     }
 
-    .nav-menu-container {
-        display: none;
-    }
 
     .hero-wrapper {
         display: none;
@@ -683,10 +818,7 @@
 
     }
 
-    /* body.modal-open .product-card-badge-mobile,
-    body.modal-open .product-card-wishlist-mobile {
-        display: none !important;
-    } */
+
 
     /*  Mobile Modal (separate)  */
     .mobile-img-modal {
@@ -1225,6 +1357,7 @@
 
 }
 
+
 /* 2 columns */
 @media (max-width: 599px) {
     .category-product-grid {
@@ -1232,6 +1365,7 @@
         grid-row-gap: 50px;
     }
 }
+
 
 @media screen and (max-width: 544px) {
     .category-div-img {
@@ -1270,6 +1404,16 @@
     .shopping-img {
         max-width: calc(42.1vw - 40px);
     }
+
+    .cart-modal {
+        width: 98%;
+        max-width: 98%;
+        max-height: calc(100vh - 32px);
+    }
+
+
+
+
 }
 
 @media screen and (max-width: 479px) {
@@ -1379,5 +1523,9 @@
 
     }
 
+    .cart-item img {
+        width: 50px;
+        height: 50px;
 
+    }
 }

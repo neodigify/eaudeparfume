@@ -272,40 +272,33 @@ initServiceSwiper();
 window.addEventListener("resize", initServiceSwiper);
 
 //hambergur
-const hamburger = document.querySelector(".hamburger-menu");
-const navMenu = document.querySelector(".nav-menu-container");
-const menuItems = document.querySelectorAll(".menu-item");
 
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
+const hamburger = document.querySelector(".hamburger-menu");
+const menuDrawer = document.querySelector(".menu-drawer");
+const menuOverlay = document.querySelector(".menu-overlay");
+const closeMenuBtn = document.querySelector(".close-menu-btn");
+const menuItems = document.querySelectorAll(".drawer-content-menu a");
+
+function openMenu() {
+  menuDrawer.classList.add("active");
+  menuOverlay.classList.add("active");
+}
+
+function closeMenu() {
+  menuDrawer.classList.remove("active");
+  menuOverlay.classList.remove("active");
+}
+
+hamburger.addEventListener("click", openMenu);
+menuOverlay.addEventListener("click", closeMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 
 menuItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    navMenu.classList.remove("active");
-  });
+  item.addEventListener("click", () => {});
 });
 
 // details page slider
 
-// accordion
-// const accordions = document.querySelectorAll(".accordion-item");
-
-// accordions.forEach((item) => {
-//   const header = item.querySelector(".accordion-header");
-
-//   header.addEventListener("click", () => {
-//     // Close all other accordions
-//     accordions.forEach((i) => {
-//       if (i !== item) {
-//         i.classList.remove("active");
-//       }
-//     });
-
-//     // Toggle current accordion
-//     item.classList.toggle("active");
-//   });
-// });
 jQuery(function ($) {
   // 1) Wrap content once so we can measure inner height cleanly
   $(".product-accordion .accordion-content").each(function () {
@@ -806,4 +799,40 @@ openBtns.forEach((btn) => {
     overlay.classList.remove("active");
     drawer.classList.remove("active");
   });
+});
+
+//CART-POPUP
+document.addEventListener("DOMContentLoaded", () => {
+  const cartOverlay = document.getElementById("cartOverlay");
+  const cartModal = document.getElementById("cartModal");
+
+  function openCart() {
+    cartOverlay.style.display = "block";
+    cartModal.classList.add("open");
+  }
+  function closeCart() {
+    cartOverlay.style.display = "none";
+    cartModal.classList.remove("open");
+  }
+
+  function attachCartListeners() {
+    const addBtns = document.querySelectorAll(
+      ".add-to-cart-button, .add-to-cart-button-details"
+    );
+    addBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        openCart();
+      });
+    });
+  }
+
+  attachCartListeners();
+
+  cartOverlay.addEventListener("click", (e) => {
+    if (e.target === cartOverlay) closeCart();
+  });
+
+  window.closeCart = closeCart;
 });
