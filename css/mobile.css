@@ -240,7 +240,7 @@
         padding: 10px 0;
     }
 
-    .drawer-content-menu li a:hover {
+    .drawer-content-menu li:hover {
         text-decoration: none;
         color: #aa5291;
     }
@@ -249,7 +249,6 @@
 
         border: none;
         background: transparent;
-
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -261,7 +260,7 @@
         rotate: 270deg;
         width: 25px;
         height: 25px;
-        color: #282929;
+
     }
 
     .logo-drawer {
